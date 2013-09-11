@@ -23,6 +23,7 @@ Showcase::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'showcase#index'  
+  get 'showcase' , to: redirect('showcase#index')
   
   get '/images/:name' , to: redirect('/assets/images/%{name}.%{format}')
   get 'resources/demo/images/:name' , to: redirect('/assets/demo/images/%{name}.%{format}')
