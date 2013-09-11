@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>PrimeFaces</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>        
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div class="header-block">
+          <h1 class="logo"><%= link_to 'primeui', root_path %></h1>
+          <ul id="nav">
+            <li><a id="menu-overview" href="setup.html">Quickstart</a></li>	
+            <li><a id="menu-demos" href="demo.html">Demo</a></li>
+            <li><a id="menu-development" href="download.html">Download</a></li>
+            <li><a id="menu-development" href="themes.html">Themes</a></li>
+            <li><a id="menu-support" href="http://blog.primefaces.org/?cat=11">Blog</a></li>
+            <li><a id="menu-social" href="http://forum.primefaces.org">Forum</a></li>
+            <li><a id="menu-social" href="license.html">License</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="main">
+        <div class="content-section">
+          <div class="heading">
+            <h2>PrimeUI</h2>
+          </div>
+          <div class="content-block">					
+            <div id="sidebar">
+              <ul>
+                <li class="widgets-header">Widgets</li>
+                <li><%= link_to 'Ajax',showcase_ajax_path %></li>                           
+                <li><%= link_to 'Button',showcase_button_path %></li>           
+                <li><%= link_to 'Inputtext',showcase_inputtext_path %></li>                
+                <li><%= link_to 'Inputtextarea',showcase_inputtextarea_path %></li>
+                <li><%= link_to 'Tabview',showcase_tabview_path %></li>                
+                <li><%= link_to 'Dialog',showcase_dialog_path %></li>
+                <li><%= link_to 'Checkbox',showcase_checkbox_path %></li>
+                <li><%= link_to 'Fieldset',showcase_fieldset_path %></li>
+              </ul>
+            </div>
+            
+            <div id="content-demo">
+              <%= yield %>
+            </div>
+            
+            <div style="clear: both" />            
+            
+          </div>          
+        </div>        
+      </div>
+    </div>  
+
+    <div id="footer">
+      <div class="footer-block">
+        <div class="copy-block">
+          <span class="copy"> All rights reserved.</span>
+        </div>
+        <img src="../images/ornament.png" width="167" height="43" alt="image description" class="ornament" />
+      </div>
+    </div>      
+
+    <script language="javascript">
+      dp.SyntaxHighlighter.ClipboardSwf = '/assets/clipboard.swf';
+      dp.SyntaxHighlighter.HighlightAll('code');
+    </script>            
+  </body>
+</html>

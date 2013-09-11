@@ -1,0 +1,47 @@
+<h1 class="widget-title">Checkbox</h1>
+<p>Checkbox is an extension to standard checkbox element with skinning capabilities.</p>
+
+<table>  
+    <tr>  
+        <td><%= p_check_box_tag('chk1',1) %></td>  
+        <td><%= label_tag 'chk1', 'Option 1' %></td>  
+    </tr>  
+    <tr>  
+        <td><%= p_check_box_tag('chk2',2) %></td>  
+        <td><%= label_tag 'chk2', 'Option 2' %></td>    
+    </tr>  
+    <tr>  
+        <td><%= p_check_box_tag('chk3', 3, false, disabled: 'disabled') %></td>  
+        <td><%= label_tag 'chk3', 'Option 3' %></td>    
+    </tr>  
+    <tr>  
+        <td><%= p_check_box_tag('chk4',4) %></td>  
+        <td><%= label_tag 'chk4', 'Option 4' %></td>    
+    </tr>  
+</table>  
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'checkbox.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;table&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;&lt;%= p_check_box_tag('chk1',1) %&gt;&lt;/td&gt;  
+        &lt;td&gt;&lt;%= label_tag 'chk1', 'Option 1' %&gt;&lt;/td&gt;  
+    &lt;/tr&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;&lt;%= p_check_box_tag('chk2',2) %&gt;&lt;/td&gt;  
+        &lt;td&gt;&lt;%= label_tag 'chk2', 'Option 2' %&gt;&lt;/td&gt;    
+    &lt;/tr&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;&lt;%= p_check_box_tag('chk3', 3, false, disabled: 'disabled') %&gt;&lt;/td&gt;  
+        &lt;td&gt;&lt;%= label_tag 'chk3', 'Option 3' %&gt;&lt;/td&gt;    
+    &lt;/tr&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;&lt;%= p_check_box_tag('chk4',4) %&gt;&lt;/td&gt;  
+        &lt;td&gt;&lt;%= label_tag 'chk4', 'Option 4' %&gt;&lt;/td&gt;    
+    &lt;/tr&gt;  
+&lt;/table&gt; 
+</pre>
+<%end%>
+
+<%= p_tabview('doc') %>

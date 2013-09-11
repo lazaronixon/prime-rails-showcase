@@ -1,0 +1,28 @@
+<h1 class="widget-title">Button</h1>
+<p>Button widget provides styling over native button elements.</p>
+<%= p_button_tag('Default',id: 'default') %>
+
+<%= p_button_tag('Left Icon',id: 'left', icon: 'ui-icon-check') %>
+
+<%= p_button_tag('Right Icon',id: 'right', icon: 'ui-icon-close',iconPos: 'right') %>
+
+<%= p_button_tag('',id: 'icononly', icon: 'ui-icon-disk') %>
+
+<%= p_button_tag('Disabled',id: 'disabled', disabled: 'disabled') %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'button.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;%= p_button_tag('Default',id: 'default') %&gt;
+
+&lt;%= p_button_tag('Left Icon',id: 'left', icon: 'ui-icon-check') %&gt;
+
+&lt;%= p_button_tag('Right Icon',id: 'right', icon: 'ui-icon-close',iconPos: 'right') %&gt;
+
+&lt;%= p_button_tag('',id: 'icononly', icon: 'ui-icon-disk') %&gt;
+
+&lt;%= p_button_tag('Disabled',id: 'disabled', disabled: 'disabled') %&gt;
+</pre>
+<%end%>
+
+<%= p_tabview('doc') %>

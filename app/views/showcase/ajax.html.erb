@@ -1,0 +1,47 @@
+<h1 class="widget-title">Ajax</h1>
+<p>PrimeFaces Ajax provide a simple way to update any element without javascript</p>
+<%= form_tag('/ppr/setfirstname') do %>
+  <%= p_text_field_tag('name',@firstname) %>
+  <%= p_button_tag('Submit', id: 'btn',ajax: 'true') %>
+  <%=  content_tag('div',@firstname,id: 'display') %>            
+<%end%>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'ajax.html.erb',for: 'doc') do %>
+    <pre name="code" class="xml">
+&lt;%= form_tag('/ppr/setfirstname') do %&gt;
+  &lt;%= p_text_field_tag('name',@firstname) %&gt;
+  &lt;%= p_button_tag('Submit', id: 'btn',ajax: 'true') %&gt;
+
+  &lt;%=  content_tag('div',@firstname,id: 'display') %&gt;            
+&lt;%end%&gt;
+    </pre>
+  <%end%>
+
+  <%= p_tab('tab2',title: '_setfirstname_content.erb',for: 'doc') do %>
+      <pre name="code" class="xml">
+&lt;%=  content_tag('div',@firstname,id: 'display') %&gt;
+      </pre>
+  <%end%>
+
+  <%= p_tab('tab3',title: 'ppr_controller.erb',for: 'doc') do %>
+      <pre name="code" class="ruby">
+class PprController &lt; ApplicationController 
+  
+  include Prime::Rails
+  
+  def setfirstname   
+    @firstname = params['name']  
+       
+    respond_to do |format|            
+      partial_resp = render_to_string(partial: &quot;setfirstname_content&quot;) 
+      output = p_ajax_resp(update: [{id: 'display',resp: partial_resp}])
+      format.xml { render :xml =&gt; output }                      
+    end
+  end    
+
+end
+      </pre>
+      <%end%>
+
+      <%= p_tabview('doc') %>
