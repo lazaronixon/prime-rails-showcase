@@ -11,6 +11,7 @@ Showcase::Application.routes.draw do
   get "showcase/fieldset"  
   get "showcase/breadcrumb"  
   get "showcase/panel"  
+  get "showcase/password"  
   
   post "ppr/setfirstname"  
   post "ppr/setfirstname_return"   
