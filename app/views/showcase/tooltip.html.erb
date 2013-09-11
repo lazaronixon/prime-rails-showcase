@@ -1,0 +1,45 @@
+<h1 class="widget-title">Tooltip</h1>
+<p>Tooltip widget goes beyond basic browser provided tooltips by feauturing various theming, effects, events and custom content support.</p>
+
+<%= p_tooltip('default',global: 'true') %>
+
+<h3>Button</h3>
+<%= p_button_tag('Button',id: 'btn', title: 'Lorem ipsum dolor sit amet') %>
+
+<h3>Image</h3>
+<%= image_tag('/resources/demo/images/logo.png', title: 'Testing Prime-Rails with image') %>
+
+<h3>Link</h3>
+<%= content_tag('a','Hover me!',title: 'Testing Prime-Rails with link',href: '#') %>
+
+<h3>Customized</h3>
+<%= p_text_field_tag('in','Focus me!') %>
+
+<%= p_tooltip('default',for: 'in',showEvent: 'focus', at: 'left bottom') do %>
+    <%= image_tag('/resources/demo/images/galleria/galleria5.jpg') %>
+<%  end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'tooltip.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;%= p_tooltip('default',global: 'true') %&gt;
+
+&lt;h3&gt;Button&lt;/h3&gt;
+&lt;%= p_button_tag('Button',id: 'btn', title: 'Lorem ipsum dolor sit amet') %&gt;
+
+&lt;h3&gt;Image&lt;/h3&gt;
+&lt;%= image_tag('/resources/demo/images/logo.png', title: 'Testing Prime-Rails with image') %&gt;
+
+&lt;h3&gt;Link&lt;/h3&gt;
+&lt;%= content_tag('a','Hover me!',title: 'Testing Prime-Rails with link',href: '#') %&gt;
+
+&lt;h3&gt;Customized&lt;/h3&gt;
+&lt;%= p_text_field_tag('in','Focus me!') %&gt;
+
+&lt;%= p_tooltip('default',for: 'in',showEvent: 'focus', at: 'left bottom') do %&gt;
+    &lt;%= image_tag('/resources/demo/images/galleria/galleria5.jpg') %&gt;
+&lt;%  end %&gt;
+</pre>
+<%  end %>
+
+<%= p_tabview('doc') %>
