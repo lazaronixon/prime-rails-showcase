@@ -764,4 +764,13 @@ q:after{content:''}
 	text-align:center;
 	padding-bottom:20px;
 }
+
+
+.theme {
+    float: left;
+    margin: 10px 10px 20px 0;
+    position: relative;
+    text-align: center;
+    width: 110px;
+}
 /** End of Themes **/

@@ -10,7 +10,7 @@
 <%= image_tag('/resources/demo/images/logo.png', title: 'Testing Prime-Rails with image') %>
 
 <h3>Link</h3>
-<%= content_tag('a','Hover me!',title: 'Testing Prime-Rails with link',href: '#') %>
+<%= link_to 'Hover me!', showcase_tooltip_path,title: 'Testing Prime-Rails with link' %>
 
 <h3>Customized</h3>
 <%= p_text_field_tag('in','Focus me!') %>

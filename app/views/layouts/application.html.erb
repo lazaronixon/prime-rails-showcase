@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
-    <title>PrimeFaces</title>
+    <title>PrimeRails</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>        
@@ -16,19 +16,16 @@
           <h1 class="logo"><%= link_to 'primeui', root_path %></h1>
           <ul id="nav">
             <li><a id="menu-overview" href="setup.html">Quickstart</a></li>	
-            <li><a id="menu-demos" href="demo.html">Demo</a></li>
-            <li><a id="menu-development" href="download.html">Download</a></li>
-            <li><a id="menu-development" href="themes.html">Themes</a></li>
-            <li><a id="menu-support" href="http://blog.primefaces.org/?cat=11">Blog</a></li>
-            <li><a id="menu-social" href="http://forum.primefaces.org">Forum</a></li>
-            <li><a id="menu-social" href="license.html">License</a></li>
+            <li><%= link_to 'Demo', root_path %></li>
+            <li><%= link_to 'Themes', showcase_themes_path %></li>
+            <li><a id="menu-support" href="https://github.com/lazaronixon?tab=repositories">Github</a></li>            
           </ul>
         </div>
       </div>
       <div id="main">
         <div class="content-section">
           <div class="heading">
-            <h2>PrimeUI</h2>
+            <h2>Prime Rails</h2>
           </div>
           <div class="content-block">					
             <div id="sidebar">

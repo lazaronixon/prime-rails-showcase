@@ -14,6 +14,7 @@ Showcase::Application.routes.draw do
   get "showcase/password"  
   get "showcase/progressbar"     
   get "showcase/tooltip"  
+  get "showcase/themes"   
   
   post "ppr/setfirstname"  
   post "ppr/setfirstname_return"   
@@ -26,6 +27,8 @@ Showcase::Application.routes.draw do
   get '/images/:name' , to: redirect('/assets/images/%{name}.%{format}')
   get 'resources/demo/images/:name' , to: redirect('/assets/demo/images/%{name}.%{format}')
   get 'resources/demo/images/galleria/:name' , to: redirect('/assets/demo/images/galleria/%{name}.%{format}')
+  get 'showcase/resources/demo/images/themes/themesIndex/:name' , to: redirect('/assets/demo/images/themes/themesIndex/%{name}.%{format}')
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
