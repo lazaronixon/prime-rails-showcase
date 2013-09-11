@@ -1,0 +1,37 @@
+<h1 class="widget-title">ProgressBar</h1>
+<p>ProgressBar is a process status indicator.</p>
+
+<h3>Dynamic</h3>
+<%= p_progressbar('pb1',widgetVar: "pb") %>
+
+<h3>Static</h3>
+<%= p_progressbar('pb2',value: '50') %>
+
+<script type="text/javascript">
+  setInterval(function() {    
+    var val = PF('pb').jq.puiprogressbar('option', 'value') + 10;
+    PF('pb').jq.puiprogressbar('option', 'value', val);
+  }, 1000);
+</script>  
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'progressbar.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;h3&gt;Dynamic&lt;/h3&gt;
+&lt;%= p_progressbar('pb1',widgetVar: &quot;pb&quot;) %&gt;
+
+&lt;h3&gt;Static&lt;/h3&gt;
+&lt;%= p_progressbar('pb2',value: '50') %&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  setInterval(function() {    
+    var val = PF('pb').jq.puiprogressbar('option', 'value') + 10;
+    PF('pb').jq.puiprogressbar('option', 'value', val);
+  }, 1000);
+&lt;/script&gt;  
+    </pre>
+  <%  end %>
+
+
+
+  <%= p_tabview('doc') %>
