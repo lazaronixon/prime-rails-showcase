@@ -2,15 +2,18 @@ Showcase::Application.routes.draw do
  
   get "showcase/button"
   get "showcase/index"
-  get "showcase/ajax"
-  post "ppr/setfirstname"  
-  post "ppr/setfirstname_return"  
+  get "showcase/ajax" 
   get "showcase/inputtextarea"
   get "showcase/tabview"
   get "showcase/inputtext"
   get "showcase/dialog" 
   get "showcase/checkbox"  
   get "showcase/fieldset"  
+  get "showcase/breadcrumb"  
+  get "showcase/panel"  
+  
+  post "ppr/setfirstname"  
+  post "ppr/setfirstname_return"   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

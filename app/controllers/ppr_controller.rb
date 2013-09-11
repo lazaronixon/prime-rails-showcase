@@ -1,6 +1,4 @@
-class PprController < ApplicationController 
-  
-  include Prime::Rails
+class PprController < ApplicationController  
   
   def setfirstname   
     @firstname = params['name']  

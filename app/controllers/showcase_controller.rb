@@ -1,4 +1,7 @@
 class ShowcaseController < ApplicationController
-  def index
-  end
+  
+  def breadcrumb
+    add_breadcrumb "Breadcrumb" , showcase_breadcrumb_path
+  end  
+  
 end

@@ -1,0 +1,43 @@
+<h1 class="widget-title">Breadcrumb</h1>
+<p>Breadcrumb provides contextual information about page hierarchy.</p>
+
+<h3>Default</h3>
+<%= p_breadcrumb('default')  do %>
+  <%= p_breadcrumb_menu('b1',value: 'Home',url: root_path)%>   
+  <%= p_breadcrumb_menu('b1',value: 'Categories',url: '#')%>   
+  <%= p_breadcrumb_menu('b1',value: :breadcrumb ,url: showcase_breadcrumb_path)%>
+<% end %>
+
+<h3>Model</h3>
+<%= render_breadcrumbs %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'breadcrumb.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;h3&gt;Default&lt;/h3&gt;
+&lt;%= p_breadcrumb('default')  do %&gt;
+  &lt;%= p_breadcrumb_menu('b1',value: 'Home',url: root_path)%&gt;   
+  &lt;%= p_breadcrumb_menu('b1',value: 'Categories',url: '#')%&gt;   
+  &lt;%= p_breadcrumb_menu('b1',value: :breadcrumb ,url: showcase_breadcrumb_path)%&gt;
+&lt;% end %&gt;
+
+&lt;h3&gt;Model&lt;/h3&gt;
+&lt;%= render_breadcrumbs %&gt;
+</pre>
+<%  end %>
+
+<%= p_tab('tab2',title: 'showcase_controller.rb',for: 'doc') do%>
+<pre name="code" class="ruby">
+class ShowcaseController &lt; ApplicationController
+  
+  def breadcrumb
+    add_breadcrumb &quot;Breadcrumb&quot; , showcase_breadcrumb_path
+  end  
+  
+end
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>
