@@ -1,0 +1,49 @@
+<h1 class="widget-title">Dropdown</h1>
+<p>Dropdown is an advanced widget to select an item from a collection.</p>
+
+<h3>Basic</h3>  
+<%= p_select_tag('basic', options_for_select(@dropdown_options)) %>
+
+<h3>Editable</h3>  
+<%= p_select_tag('editable', options_for_select(@dropdown_options),editable: 'true') %>
+
+<h3>Filter</h3>  
+<%= p_select_tag('filter', options_for_select(@dropdown_options),filter: 'true') %>
+
+<h3>Content</h3>  
+<%= p_select_tag('content', nil,source: @dropdown_themes, content: @dropdown_content ) %>
+
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'dropdown.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;h3&gt;Basic&lt;/h3&gt;  
+&lt;%= p_select_tag('basic', options_for_select(@dropdown_options)) %&gt;
+
+&lt;h3&gt;Editable&lt;/h3&gt;  
+&lt;%= p_select_tag('editable', options_for_select(@dropdown_options),editable: 'true') %&gt;
+
+&lt;h3&gt;Filter&lt;/h3&gt;  
+&lt;%= p_select_tag('filter', options_for_select(@dropdown_options),filter: 'true') %&gt;
+
+&lt;h3&gt;Content&lt;/h3&gt;  
+&lt;%= p_select_tag('content', nil,source: @dropdown_themes, content: @dropdown_content ) %&gt;
+</pre>
+<%  end %>
+
+<%= p_tab('tab2',title: 'showcase_controller.html.erb',for: 'doc') do%>
+<pre name="code" class="ruby">
+class ShowcaseController &lt; ApplicationController
+  def dropdown
+    @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
+    @dropdown_themes =  ['afterdark' , 'afternoon', 'afterwork', 'aristo', 'black-tie', 'blitzer', 'bluesky', 'bootstrap', 'casablanca', 'cruze',  
+      'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'glass-x', 'home', 'hot-sneaks', 'humanity', 'le-frog', 'midnight',  
+      'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'rocket', 'sam', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic',  
+      'ui-darkness', 'ui-lightness', 'vader']        
+    @dropdown_content = %{&lt;img src=&quot;resources/demo/images/themes/{option}.png&quot;/&gt;&lt;span style=&quot;float:right;font-size:14px&quot;&gt;{option}&lt;/span&gt;}
+  end
+end   
+</pre>
+<%  end %>
+
+<%= p_tabview('doc') %>
