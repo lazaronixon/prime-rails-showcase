@@ -27,7 +27,8 @@ Showcase::Application.routes.draw do
   root 'showcase#index'  
   get 'showcase' , to: redirect('showcase#index')
   
-  get '/images/:name' , to: redirect('/assets/images/%{name}.%{format}')
+  get 'images/:name' , to: redirect('/assets/images/%{name}.%{format}')
+  get 'assets/images/:name' , to: redirect('/assets/themes/aristo/images/%{name}.%{format}')
   get 'resources/demo/images/:name' , to: redirect('/assets/demo/images/%{name}.%{format}')
   get 'resources/demo/images/galleria/:name' , to: redirect('/assets/demo/images/galleria/%{name}.%{format}')
   get 'showcase/resources/demo/images/themes/themesIndex/:name' , to: redirect('/assets/demo/images/themes/themesIndex/%{name}.%{format}')
