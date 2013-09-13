@@ -1,0 +1,2585 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body{
+	margin:0;
+	color:#636363;
+	font:12px/16px "Trebuchet MS", "Times New Roman", Times, serif;
+	background:#fff;
+	min-width:998px;
+}
+img{border-style:none;}
+a{text-decoration:none; color:#0076A3;}
+a:hover{text-decoration:underline;}
+input,
+textarea,
+select{
+	font:100% Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+}
+form,
+fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+q{quotes:none;}
+q:before{content:''}
+q:after{content:''}
+#wrapper{
+	width:100%;
+	overflow:hidden;
+}
+#header{
+	width:100%;
+	background:#424548;
+	border-bottom:1px solid #56585c;
+}
+.header-block{
+	width:998px;
+	height:49px;
+	margin:0 auto;
+}
+.header-block:after{
+	clear:both;
+	display:block;
+	content:'';
+}
+.logo{
+	float:left;
+	margin:0;
+	background:url(../images/logo.png) no-repeat;
+	width:110px;
+	height:49px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.logo a{
+	height:100%;
+	display:block;
+}
+#nav{
+	padding:21px 18px 0 0;
+	margin:0;
+	list-style:none;
+	float:right;
+	font:bold 14px/18px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+#nav li{
+	float:left;
+	position:relative;
+	margin:0 0 0 10px;
+}
+#nav a{
+	display:block;
+	color:#a2a0a0;
+	padding:0 14px 0 0;
+	text-decoration:none;
+}
+#nav .active a,
+#nav li:hover a,
+#nav a:hover{
+    color:#f9f7f7;
+	background-position:100% 8px;
+}
+#nav .drop{
+	width:119px;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -60px;
+	top:100%;
+	z-index:100;
+	display:none;
+	background:url(../images/bg-drop.png) no-repeat -119px 100%;
+	padding:11px 0 13px;
+}
+#nav .drop .frame{
+	background:url(../images/bg-drop.png) repeat-y;
+	width:119px;
+	float:left;
+}
+#nav .drop ul{
+	float:left;
+	margin:0 0 -5px;
+	padding:5px 0 0;
+	position:relative;
+	width:119px;
+	list-style:none;
+	font:13px/16px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+#nav .drop ul li{
+	float:none;
+	margin:0;
+	padding:0 9px 6px 20px;
+}
+#nav .drop ul a{
+	background:none;
+	padding:0;
+	color:#464646;
+}
+#nav li:hover ul a{
+	height:1%;
+	background:none;
+}
+#nav li:hover ul li{
+	vertical-align:top;
+	color:#464646;
+}
+#nav ul a:hover,
+#nav ul li:hover a{
+	background:none;
+	color:#464646;
+	text-decoration:underline;
+}
+#main{
+	background:url(../images/bg-main.png) repeat-x;
+	width:100%;
+	overflow:hidden;
+}
+.visual{
+	width:100%;
+	background:#f2f1f1 url(../images/bg-visual.png) repeat-x;
+}
+.visual-block{
+	width:998px;
+	margin:0 auto;
+	text-align:center;
+	padding:37px 0 7px;
+}
+.visual-block h2{
+	display:block;
+	margin:0 auto;
+	color:#707070;
+	letter-spacing:-2px;
+	text-shadow:0 -2px 1px #272727;
+	font:bold 45px/54px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.visual-block .heading{
+	display:block;
+	color:#3c3c3c;
+	font-size:30px;
+	line-height:34px;
+}
+.visual-block .image{
+	display:block;
+	margin:0 auto;
+	padding:0 10px 0 0;
+}
+
+.btn{
+	display:block;
+	margin:0 auto;
+	width:129px;
+	height:48px;
+	margin:0 50px 0px 30px;
+	font:15px/17px Arial, Helvetica, sans-serif;
+	text-shadow:0 1px 1px #4f6f0a;
+	color:#fff;
+	text-align:left;
+	text-decoration:none !important;
+	letter-spacing:-1px;
+	float:left;
+	background:url(../images/btn-blue.png) no-repeat;
+}
+.btn span {
+	display:block;
+	font-size:18px;
+	text-transform:uppercase;
+	text-decoration:none !important;
+	margin:6px 0 0px 0px;
+}
+.btn:hover {
+	background:url(../images/btn-darkblue.png) no-repeat;
+}
+.btn-demo span {
+	margin:15px 0 0 40px
+}
+.btn-download span {
+	margin:15px 0 0 15px
+}
+.btn-learn span {
+	margin:15px 0px 0px 40px;
+}
+
+.tab-section{
+	width:100%;
+	overflow:hidden;
+	background:#fff url(../images/bg-tab-block.gif) repeat-x;
+	padding:12px 0;
+}
+.tab-block{
+	margin:0 auto;
+	width:998px;
+	overflow:hidden;
+    margin-top: 10px;
+}
+.tabset{
+	padding:0;
+	margin:0 -39px 0 0;
+	list-style:none;
+	width:1037px;
+	font-size:16px;
+	line-height:20px;
+}
+.tabset li{
+	float:left;
+	text-align:center;
+	margin:0 81px 0 27px;
+}
+.tabset a{
+	display:block;
+	color:#a5bfcb;
+	text-decoration:none;
+	padding:0 0 21px;
+}
+.tabset span{
+	display:inline-block;
+	width:52px;
+	height:52px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.tabset img{
+	display:block;
+	width:52px;
+	height:120px;
+	margin:-68px 0 0;
+}
+.tabset strong{
+	display:block;
+	font-weight:normal;
+}
+.tabset .active img,
+.tabset a:hover img{
+	display:block;
+	margin:0;
+}
+.tabset .active,
+.tabset a:hover{
+	color:#285d77;
+	background:url(../images/arrow-tab.png) no-repeat 50% 100%;
+}
+#tab-2,
+#tab-3,
+#tab-4,
+#tab-5,
+#tab-6{display:none;}
+.tab-content{
+	width:993px;
+	overflow:hidden;
+	margin:0 auto;
+	padding:35px 0 14px 5px;
+}
+.tab-content .image{
+	float:left;
+	margin:0 37px 0 0 ;
+}
+.tab-content .image img{display:block;}
+.tab-box{
+	overflow:hidden;
+	padding:104px 0 0 21px;
+}
+.tab-box h3{
+	margin:0 0 2px;
+	color:#282828;
+	font:30px/34px "Trebuchet MS", "Book Antiqua", Palatino, serif;
+}
+.tab-box .heading{
+	display:block;
+	font-size:18px;
+	line-height:22px;
+	color:#7d7d7d;
+	margin:0 0 13px;
+}
+.tab-list{
+	padding:0;
+	margin:0 0 0 -21px;
+	list-style:none;
+	font-size:18px;
+}
+.tab-list li{
+	color:#7d7d7d;
+	padding:10px 0 10px 30px;
+	background:url(../images/arrow-check.png) no-repeat 0 10px;
+}
+.column-section{
+	width:100%;
+	background:#f2f1f1 url(../images/bg-column-block.png) repeat-x;
+	padding:14px 0 32px;
+}
+.column-block{
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+	padding:0 0 0 8px;
+}
+.testi-section,
+.user-section,
+.blogs-section{
+	float:left;
+	margin:0 32px 0 0;
+}
+.blogs-section{
+	width:650px;
+}
+.user-section {
+    width: 325px
+}
+.testi-section .headline,
+.user-section .headline,
+.blogs-section .headline{
+	display:block;
+	font:18px/22px "Trebuchet MS", "Times New Roman", Times, serif;
+	color:#606060;
+	text-transform:uppercase;
+	padding:5px 0 29px 39px;
+}
+.testi-section .headline{background:url(../images/ico-star.png) no-repeat 6px 4px;}
+.blogs-section .headline{background:url(../images/ico-star.png) no-repeat 6px 4px;}
+.testi-section .post,
+.blogs-section .post{
+	width:100%;
+	overflow:hidden;
+	font:12px/14px "Trebuchet MS", "Times New Roman", Times, serif;
+	margin:0 0 31px;
+}
+.testi-section .post{
+	width:306px;
+	margin:0 0 2px;
+}
+.post .entry-title{
+	display:block;
+	color:#585858;
+	font:16px/20px "Trebuchet MS", "Times New Roman", Times, serif;
+	margin:0 0 8px;
+}
+.testi-section .post .entry-title{margin:0 0 3px;}
+.post p{margin:0 0 14px;}
+.post-frame{
+	width:100%;
+	overflow:hidden;
+	font-size:12px;
+}
+.post .name,
+.post .date{
+	float:right;
+	font-style:normal;
+	margin:0 0 0 8px;
+}
+.testi-section .view,
+.blogs-section .view{
+	display:block;
+	text-align:right;
+	font:bold 14px/18px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.blogs-section .view{
+	padding:0 8px 0 0;
+	margin:-16px 0 0;
+}
+.testi-section .view{
+	width:306px;
+	margin:-12px 0 11px;
+}
+.testi-section .view a,
+.user-section .view a,
+.blogs-section .view a{
+	color:#0076a3;
+	text-decoration:underline;
+}
+.logo-block .view:hover,
+.testi-section .view a:hover,
+.user-section .view a:hover,
+.blogs-section .view a:hover{text-decoration:none;}
+.logo-block{
+	width:376px;
+	overflow:hidden;
+	background:#e0dfda url(../images/bg-logo-block.gif) no-repeat;
+}
+.logo-block .frame{
+	background:url(../images/bg-logo-block.gif) no-repeat -376px 100%;
+	width:360px;
+	overflow:hidden;
+	padding:12px 4px 2px 12px;
+}
+.logo-block .heading{
+	width:100%;
+	overflow:hidden;
+	margin:0 0 2px;
+}
+.logo-block .view{
+	float:right;
+	color:#6d6963;
+	font-size:14px;
+	line-height:18px;
+	text-decoration:underline;
+	width:auto;
+	margin:0;
+}
+.logo-block .title{
+	float:left;
+	color:#7e7972;
+	font:17px/23px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.logo-list{
+	padding:0;
+	margin:0;
+	list-style:none;
+	width:100%;
+	overflow:hidden;
+}
+.logo-list td {
+	padding: 20px 5px;
+}
+.logo-list td img {
+	display: block;
+	margin-left: auto;   
+	margin-right: auto;
+}
+.logo-list img{display:block;}
+.content-section{
+	width:958px;
+	padding:37px 19px 23px 0;
+	margin:0 auto;
+}
+.content-section .heading{
+	width:935px;
+	padding:0 2px 13px 21px;
+	overflow:hidden;
+    display: none;
+}
+.content-section h2{
+	float:left;
+	margin:0;
+	text-shadow:0 2px 1px #fff;
+	color:#3c3c3c;
+	font:24px/28px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.add-nav{
+	float:right;
+	padding:5px 0 0;
+	margin:0;
+	list-style:none;
+	font:16px/20px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.add-nav li{
+	float:left;
+	margin:0 0 0 50px;
+}
+.add-nav a{
+	color:#3c3c3c;
+	text-shadow:0 2px 1px #fff;
+	text-decoration:none;
+}
+.add-nav .active a,
+.add-nav a:hover{color:#0e5486;}
+.content-block{
+	width:910px;
+	padding:18px 24px 0 24px;
+	background:#fff url(../images/bg-content-block.gif) no-repeat;
+}
+.breadcrumbs{
+	padding:0 20px 7px 0;
+	margin:0 0 7px;
+	list-style:none;
+	width:914px;
+	overflow:hidden;
+	font:12px/16px "Trebuchet MS", "Times New Roman", Times, serif;
+	border-bottom:1px solid #e3e5e6;
+}
+.breadcrumbs li{
+	float:left;
+	color:#636363;
+	margin:0 0 0 3px;
+}
+.breadcrumbs a{
+	color:#303030;
+	display:block;
+	background:url(../images/arrow-breadcrumbs.gif) no-repeat 100% 5px;
+	margin:0 3px 0 0;
+	padding: 0 15px 0 0;
+	text-decoration:underline;
+}
+.breadcrumbs a:hover{text-decoration:none;}
+.content-block .title{
+	display:block;
+	color:#3c3c3c;
+	padding: 0 20px 15px 0;
+	font:16px/20px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.content-block h3{
+	margin:20px 20px 8px 0;
+	font:20px "Trebuchet MS", "Times New Roman", Times, serif;
+	color:#004a80;
+}
+.content-block{
+	font: 14px "Trebuchet MS","Times New Roman",Times,serif;
+}
+
+.download{
+	width:877px;
+	margin:0 0 35px;
+	border-collapse:collapse;
+	font:14px/16px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.download th{
+	text-align:left;
+	font:16px/20px "Trebuchet MS", "Times New Roman", Times, serif;
+	padding:0;
+}
+.download th span{
+	color:#3c3c3c;
+	background:#a7c0c6;
+	display:block;
+	padding:9px 0 10px 17px;
+	margin:0 0 6px;
+}
+.download td{
+	padding:5px 10px 2px 15px;
+	border-bottom:1px solid #cedcdf;
+}
+.download .version{
+	width:156px;
+	padding:1px 0 2px 15px;
+	font:16px/20px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.download .binary{width:201px;}
+.download .source{width:217px;}
+.download td a{
+	color:#004a80;
+	text-decoration:none;
+}
+.download td a:hover{color:#94afb5;}
+
+.text-block{
+	padding:28px 0 0;
+	line-height:14px;
+}
+.text-block h3{margin:0 0 7px;}
+.text-block p{margin:0 0 24px;}
+.content-list{
+	padding:0 0 0 15px;
+	margin:-2px 0 13px;
+	list-style:none;
+	width:934px;
+	overflow:hidden;
+	font:14px/16px "Trebuchet MS", "Times New Roman", Times, serif;
+}
+.content-list li{
+	margin:0 0 7px;
+	background:url(../images/bullet-list.gif) no-repeat 0 6px;
+	padding:0 0 0 18px;
+}
+.content-list a{
+	color:#004a80;
+	text-decoration:none;
+}
+.content-list a:hover{color:#94afb5;}
+#footer{
+	width:100%;
+	overflow:hidden;
+	background:#424548;
+	padding:0 0 33px;
+}
+.social-block{
+	width:100%;
+	background:url(../images/bg-social-block.gif) repeat-x;
+	padding:7px 0;
+}
+.social{
+	padding: 10px 0 0 0;
+	margin:0 auto;
+	list-style:none;
+	width:auto;
+	overflow:hidden;
+	float:left;
+}
+.social li{
+	float:left;
+	margin:0 13px 0 0;
+}
+.social img{display:block;}
+.footer-block{
+	width:998px;
+	margin:0 auto;
+	padding:19px 0 0 0;
+}
+.footer-block .box-section{
+	width:1070px;
+	margin:0 -72px 51px 12px;
+	overflow:hidden;
+}
+.footer-block .box{
+	float:left;
+	width:150px;
+	margin:0 64px 0 0;
+}
+.footer-block h4{
+	margin:0 0 21px;
+	color:#898989;
+	font-size:18px;
+}
+.footer-list{
+	padding:0;
+	margin:0;
+	list-style:none;
+	font-size:14px;
+	line-height:18px;
+}
+.footer-list li{margin:0 0 10px;}
+.footer-list a{color:#fff;}
+.copy-block{
+	display:block;
+	width:991px;
+	padding:0 0 0 7px;
+	background:url(../images/bg-copy.gif) no-repeat 0 8px;
+	text-align:center;
+	margin: 20px 0 25px -10px
+}
+.copy-block .copy{
+	color:#959595;
+	background:#424548;
+	padding:0 30px;
+}
+.copy-block .copy a{
+	color:#0076a3;
+	padding:0 3px;
+}
+.ornament{
+	display:block;
+	margin:0 auto;
+	padding:0 12px 0 0;
+}
+
+.meta-nav {
+	color:#0076A3
+}
+
+.post p a {
+	color:#0076A3;
+	clear:both;
+	display:block;
+}
+
+.tab-block li.last {
+	margin-right:0px;
+}
+
+/** Who Uses **/
+.users-container {
+	margin-bottom:30px;
+}
+
+.user-container {
+	width:215px;
+	height:180px;
+	float:left;
+	margin:4px;
+	
+	/* Giving the sponsor div a relative positioning: */
+	position:relative;
+	cursor:pointer;
+}
+
+.user-logo {
+	/*  The sponsor div will be positioned absolutely with respect
+		to its parent .sponsor div and fill it in entirely */
+
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	border:1px solid #ddd;	
+	background:url("img/background.jpg") no-repeat center center #f9f9f9;
+}
+
+.user-logo:hover{
+	border:1px solid #999;
+	
+	/* CSS3 inset shadow: */
+	-moz-box-shadow:0 0 30px #999 inset;
+	-webkit-box-shadow:0 0 30px #999 inset;
+	box-shadow:0 0 30px #999 inset;
+}
+
+.user-logo img{
+	/* Centering the logo image in the middle of the sponsorFlip div */
+	
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-70px 0 0 -70px;
+}
+/** End of Who Uses **/
+
+.button-block {
+    margin: 0 0 10px 200px;
+    padding: 0 18px 0 0;
+    position: relative;
+    width: 980px;
+}
+
+/** Overlay Meny **/
+.overlay-menu {
+    width:150px;
+    padding:0.3em;
+    display:none;
+    z-index:100000;
+    position:absolute;
+    background:none repeat scroll 0 0 #424548;
+    margin:0;
+    border:0 none;
+    outline:0 none;
+    list-style:none outside none;
+    -moz-box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+}
+
+#nav li.overlay-menuitem {
+    border:none;
+    width:100%;
+    float:left;
+    clear:both;
+    padding:0;
+    margin:1px;
+}
+
+#nav a.overlay-menuitem-link {
+    display:block;
+    outline:none;
+	text-decoration:none;
+    padding:0.3em;
+    font-size:12px;
+}
+
+#nav a.overlay-menuitem-link:hover {
+	color:#f9f7f7 !important;
+	text-decoration:none !important;
+}
+
+/** Themes **/
+.themes-table {
+	width:100%;
+}
+.themes-table td {
+	text-align:center;
+	padding-bottom:20px;
+}
+
+
+.theme {
+    float: left;
+    margin: 10px 10px 20px 0;
+    position: relative;
+    text-align: center;
+    width: 110px;
+}
+/** End of Themes **/
+.ui-widget {
+    font-size: 12px !important;
+}
+
+#sidebar {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    float: left;
+    margin-top: 1em;
+    overflow: hidden;
+    width: 15%;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar li {
+    list-style-type: none;
+    line-height: 15px;
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #F2F2F2;
+    font-weight: bold;
+}
+
+#sidebar li.themes-container {
+    padding: 5px 0px 5px 8px;
+}
+
+#sidebar .widgets-header {
+    background: none repeat scroll 0 0 #85B2CB;
+    color: #FFFFFF;
+    padding: 5px 10px 5px 15px;
+}
+
+#sidebar li a {
+    color: #636363;
+    display: block;
+    padding: 5px 10px 5px 15px;
+}
+
+#sidebar li a:hover {
+    text-decoration: none;
+    background: none repeat scroll 0 0 #424548;
+    color: #F9F7F7;
+}
+
+#content-demo {
+    float: left;
+    padding-left: 20px;
+    width: 80%;
+}
+
+#content-demo p {
+    display: none;
+}
+
+#content-nondemo {
+    width: 100%;
+}
+
+.content-block h1.widget-title {
+    font-size: 24px;
+    text-align: center;
+    background: none repeat scroll 0 0 #424548;
+    color: #F9F7F7;
+    padding: 4px 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.doc-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.doc-table th, .doc-table td {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px;
+    padding: 4px 10px;
+}
+
+.content-block h3.pui-accordion-header {
+    margin: auto;
+	font: inherit;
+	color: inherit;
+}
+
+.content-block .pui-menu h3 {
+	color: inherit;
+}
+
+.content-block h3 {
+    color: #636363;
+}
+/*
+ * Copyright 2009-2012 Prime Teknoloji.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.pui-shadow {
+    -moz-box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+}.pui-autocomplete {
+    width: auto;
+    zoom: 1;
+    cursor: pointer;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position:static;
+}
+
+.pui-autocomplete-query {
+    font-weight: bold;
+}
+
+.pui-autocomplete-panel {
+    position: absolute;
+    overflow: auto;
+}
+
+.pui-autocomplete-panel .pui-autocomplete-list {
+    padding: 0.4em;
+    border: 0 none;
+}
+
+.pui-autocomplete-panel .pui-autocomplete-list-item {
+    border:0px none;
+    cursor:pointer;
+    font-weight:normal;
+    margin:1px 0;
+    padding:3px 5px;
+    text-align:left;
+}
+
+.pui-autocomplete-panel .pui-autocomplete-table {
+    border-collapse:collapse;
+    width: 100%;
+}
+
+.pui-autocomplete-panel .pui-autocomplete-table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    padding:4px 10px 4px 10px;
+}
+
+.pui-autocomplete .ui-button-icon-only .ui-button-text {
+    padding: 0.29em;
+}
+
+/* Multiple Selection */
+.pui-autocomplete-multiple {
+    clear: left;
+    cursor: text;
+    list-style-type: none;
+    margin: 0;
+    min-height: 1px;
+    overflow: hidden;
+    width: 400px;
+    padding: 0px;
+}
+
+.pui-autocomplete-token {
+    cursor: default;
+    float: left;
+    overflow: hidden;
+    padding: 1px 3px;
+    white-space: nowrap;
+    position: relative;
+    margin:2px;
+}
+
+.pui-autocomplete-token-label {
+    display: block;
+    padding: 0em 2.1em 0em 0.5em;
+}
+
+.pui-autocomplete-token-icon {
+    margin-top: -9px;
+    position: absolute;
+    right: 0.2em;
+    top: 50%;
+    cursor: pointer;
+}
+
+.pui-autocomplete-input-token {
+    float: left;
+    list-style-type: none;
+    margin: 1px;
+    padding: 0;
+}
+
+.pui-autocomplete-input-token .pui-inputtext {
+    border: 0 none;
+    width: 140px;
+    outline: medium none;
+    background-color: transparent;
+    margin: 0px;
+    padding: 4px;
+    box-shadow: none;
+}/* Button */
+.pui-button { 
+    display: inline-block; 
+    position: relative; 
+    padding: 0; 
+    margin-right: .1em; 
+    text-decoration: none !important; 
+    cursor: pointer; 
+    text-align: center; 
+    zoom: 1; 
+    overflow: visible; /* the overflow property removes extra width in IE */
+} 
+
+.pui-button-icon-only { 
+    width: 2.4em;
+} 
+
+/*button text element */
+.pui-button .pui-button-text { 
+    display: block; 
+    line-height: 1.4;  
+}
+
+.pui-button-text-only .pui-button-text { 
+    padding: .2em 1em; 
+}
+
+.pui-button-icon-only .pui-button-text { 
+    padding: .2em; 
+    text-indent: -9999999px; 
+}
+
+.pui-button-text-icon-left .pui-button-text { 
+    padding: .2em 1em .2em 2.1em; 
+}
+
+.pui-button-text-icon-right .pui-button-text { 
+    padding: .2em 2.1em .2em 1em; 
+}
+
+/*button icon element(s) */
+.pui-button-icon-only .ui-icon, 
+.pui-button-text-icon-left .ui-icon, 
+.pui-button-text-icon-right .ui-icon { 
+    position: absolute; 
+    top: 50%; 
+    margin-top: -8px; 
+}
+
+.pui-button-icon-only .ui-icon { 
+    left: 50%; 
+    margin-left: -8px; 
+}
+
+.pui-button-icon-left {
+    left: .5em; 
+}
+
+.pui-button-icon-right {
+    right: .5em; 
+}
+
+/*button sets*/
+.pui-buttonset { 
+    margin-right: 7px; 
+}
+.pui-buttonset .pui-button { 
+    margin-left: 0; 
+    margin-right: 0;
+}
+
+/* workarounds */
+button.pui-button::-moz-focus-inner { 
+    border: 0; padding: 0; /* reset extra padding in Firefox */
+}.pui-chkbox {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pui-chkbox .pui-chkbox-box {
+    float: left;
+    width: 16px;
+    height: 16px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    margin-right: 3px;
+}
+
+.pui-chkbox .pui-chkbox-label {
+    cursor: pointer;
+    display: block;
+    margin: 0 3px;
+    outline: medium none;
+    z-index: 1;
+    float: left;
+}.pui-datatable table {
+	border-collapse: collapse;
+    width: 100%;
+}
+
+.pui-datatable .pui-datatable-header,
+.pui-datatable .pui-datatable-footer {
+    text-align: center;
+    padding: 4px 10px;
+}
+
+.pui-datatable .pui-datatable-caption {
+    border-bottom: 0px none;
+    text-align: center;
+    padding: 4px 10px;
+}
+
+.pui-datatable .pui-datatable-footer {
+    border-top: 0px none;
+}
+
+.pui-datatable thead th, .pui-datatable tfoot td {
+    text-align: center;
+}
+
+.pui-datatable thead th,
+.pui-datatable tbody td,
+.pui-datatable tfoot td {
+    padding: 4px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.pui-datatable tbody td {
+    border-color: inherit;
+}
+
+.pui-datatable .pui-sortable-column {
+    cursor: pointer;
+}
+
+.pui-datatable .pui-sortable-column-icon {
+    display: inline-block;
+    margin: -3px 0px -3px 2px;
+}
+
+.pui-datatable .pui-paginator {
+    border-top: 0 none;
+}
+
+.pui-datatable .pui-datatable-data tr.ui-state-hover {
+    font-weight: inherit;
+    cursor: pointer;
+}
+
+.pui-datatable tr.ui-state-highlight {
+    cursor: pointer;
+}.pui-dialog { position: fixed; padding: 0; overflow: hidden; }
+.pui-dialog .pui-dialog-titlebar { padding: .4em .4em .4em 1em; position: relative; border:0px; }
+.pui-dialog .pui-dialog-title { float: left; margin: .3em 16px .1em 0; } 
+.pui-dialog .pui-dialog-content {position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.pui-dialog .pui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.pui-dialog .pui-dialog-buttonpane .pui-dialog-buttonset { float: right; }
+.pui-dialog .pui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.pui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .pui-dialog-titlebar { cursor: move; }
+.pui-dialog .pui-dialog-titlebar-close, .pui-dialog .pui-dialog-titlebar-minimize,.pui-dialog .pui-dialog-titlebar-maximize { float: right; margin: 0px; top:0px; padding: 1px; cursor:pointer; }
+.pui-dialog .pui-dialog-titlebar-close span, .pui-dialog .pui-dialog-titlebar-minimize span, .pui-dialog .pui-dialog-titlebar-maximize span { display: block; margin: 0px; }
+.pui-dialog .pui-dialog-titlebar-close:hover, .pui-dialog .pui-dialog-titlebar-close:focus, .pui-dialog .pui-dialog-titlebar-minimize:hover, .pui-dialog .pui-dialog-titlebar-minimize:focus, .pui-dialog .pui-dialog-titlebar-maximize:hover, .pui-dialog .pui-dialog-titlebar-maximize:focus   { padding: 0; }
+.pui-dialog-footer {padding: .4em 1em; border-width: 1px 0 0 0;text-align:left;}
+.pui-dialog-docking-zone {position: fixed;bottom: 0;left: 0;}
+.pui-dialog-minimizing {border: 2px dotted gray;}
+.ui-confirm-dialog-severity {float: left; margin: 3px 7px 20px 0;}
+.pui-dialog.pui-dialog-minimized{*width: 200px !important;} /*IE7 hack*/
+
+/** RTL **/
+.pui-dialog-rtl {
+    direction: rtl;
+}
+
+.pui-dialog.pui-dialog-rtl .pui-dialog-title {
+    float: right;
+}
+
+.pui-dialog.pui-dialog-rtl .pui-dialog-titlebar-close,
+.pui-dialog.pui-dialog-rtl .pui-dialog-titlebar-minimize,
+.pui-dialog.pui-dialog-rtl .pui-dialog-titlebar-maximize {
+    float: left;
+}
+
+.pui-dialog.pui-dialog-rtl .pui-dialog-footer {
+    text-align: right;
+}.pui-dropdown {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    zoom: 1;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pui-dropdown .pui-dropdown-trigger {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    width: 16px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 3px;
+}
+
+.pui-dropdown .pui-dropdown-trigger  .ui-icon {
+    margin-top: 3px;
+}
+
+.pui-dropdown .pui-dropdown-label  {
+    display: block;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    width: 100%;
+    float:left;
+}
+
+.pui-dropdown.ui-state-disabled .pui-dropdown-trigger,
+.pui-dropdown.ui-state-disabled .pui-dropdown-label {
+    cursor: default;
+}
+
+.pui-dropdown label.pui-dropdown-label  {
+    cursor: pointer;
+}
+
+.pui-dropdown input.pui-dropdown-label  {
+    cursor: default;
+}
+
+.pui-dropdown-panel {
+    position: absolute;
+    height: auto;
+}
+
+.pui-dropdown-panel .pui-dropdown-items-wrapper {
+    overflow: auto;
+}
+
+.pui-dropdown-panel .pui-dropdown-item {
+    font-weight: normal;
+}
+
+.pui-dropdown-panel .pui-dropdown-item-group {
+    font-weight: bold;
+}
+
+.pui-dropdown-panel .pui-dropdown-list {
+    padding: 0.4em;
+    border: 0 none;
+}
+
+.pui-dropdown-panel .pui-dropdown-list-item {
+    border:0px none;
+    cursor:pointer;
+    margin:1px 0;
+    padding:3px 5px;
+    text-align:left;
+}
+
+.pui-dropdown-panel .pui-dropdown-filter {
+    width: 85%;
+    padding-right:15px;
+}
+
+.pui-dropdown-panel .pui-dropdown-filter-container {
+    position: relative;
+    margin: 0;
+    padding: 0.4em;
+    display: inline-block;
+}
+
+.pui-dropdown-panel .pui-dropdown-filter-container .ui-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}.pui-fieldset, .pui-fieldset .pui-fieldset-legend {
+    padding:0.6em 1em;
+}
+
+.pui-fieldset-toggleable .pui-fieldset-legend {
+    padding: 0.5em 1em 0.5em 0.5em;
+    cursor:pointer;
+    white-space: nowrap;
+}
+
+.pui-fieldset .pui-fieldset-toggler {
+    padding-right: .1em;
+    margin-top: -0.1em;
+    float:left;
+}.pui-galleria { 
+    overflow: hidden; 
+    visibility: hidden; 
+    position: relative;
+}
+
+.pui-galleria-panel-wrapper {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pui-galleria-panel {
+    filter: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+}
+
+.pui-galleria-filmstrip-wrapper {
+    overflow: hidden;
+    margin: 5px auto;
+    position: relative;
+}
+
+.pui-galleria-filmstrip { 
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 2340px;
+    z-index: 900;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.pui-galleria-frame {
+    float:left;
+    margin-right: 5px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.pui-galleria-frame-active {
+    opacity: 1;
+}
+
+.pui-galleria-frame-content {
+    overflow: hidden;
+}
+
+.pui-galleria-nav-next, .pui-galleria-nav-prev {
+	cursor: pointer;
+    position: absolute;
+}
+
+.pui-galleria-nav-prev {	
+    left: 5px;
+}
+
+.pui-galleria-nav-next {
+    right: 5px;
+}
+
+.pui-galleria-caption {
+    position: absolute;
+    left:1px;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    color: #FFFFFF;
+    padding: 0.2em 1em;
+}
+
+.pui-galleria-panel-content {
+    padding: 1em 1.4em;
+}/* ie6 */
+* html .pui-growl {
+	position:absolute; 
+}
+* html .pui-growl-item {
+	padding-bottom:0;
+}
+* html .pui-growl-icon-close {
+	top:7px;
+	right:7px;
+}
+
+.pui-growl {
+	position:fixed;
+	top:20px;
+	right:20px;
+	width:301px;
+}
+.pui-growl-item-container {
+	position:relative;
+	margin:0 0 10px 0;
+	opacity:0.85;
+	filter:alpha(opacity=85);
+}
+.pui-growl-item {
+	display:block;
+	padding:10px 15px;
+}
+.pui-growl-item p {
+	padding:0;
+	margin:0;
+}
+.pui-growl-icon-close {
+	position:absolute;
+	top:5px;
+	right:3px;
+	cursor:pointer;
+}
+.pui-growl-title {
+	font-weight:bold;
+	padding:0 0 7px 0;
+	display:block;
+}
+.pui-growl-image {
+	width:32px;
+	height:32px;
+	float:left;
+    margin:0;
+    padding:0;
+    display: block;
+    background: url("../../images/messages.png") no-repeat;
+}
+
+.pui-growl-image-info {
+	background-position: 0 -264px;
+}
+
+.pui-growl-image-warn {
+	background-position: 0 -396px;
+}
+
+.pui-growl-image-error {
+	background-position: 0 0;
+}
+
+.pui-growl-image-fatal {
+	background-position: 0 -228px;
+}
+
+.pui-growl-message {
+	padding:0 0 5px 0;
+	width:220px;
+	float:right;
+}
+
+.pui-growl-message p {
+	font-weight: normal;
+}.pui-inputtext {
+    margin: 0;
+    outline: medium none;
+    padding: 4px;
+    font-weight: normal;
+}
+
+.ui-widget-header .pui-inputtext,
+.ui-widget-content .pui-inputtext {
+    font-weight: normal;
+}.pui-inputtextarea-resizable {
+    overflow: hidden;
+    resize:none;
+}.pui-lightbox {
+    position: fixed;
+}
+
+.pui-lightbox-content-wrapper {
+    position: relative;
+}
+
+.pui-lightbox-content {
+    position: relative;
+    margin:0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.pui-lightbox-nav-right, .pui-lightbox-nav-left {
+   position: absolute;
+   top:50%;
+   cursor: pointer;
+}
+
+.pui-lightbox-nav-left {
+   left:0;
+}
+
+.pui-lightbox-nav-right {
+   right:0;
+}
+
+.pui-lightbox-loading {
+    background: url("../../images/loading.gif") #000000 center center no-repeat;
+}
+
+.pui-lightbox-caption {
+    padding: 0.2em 0.4em;
+    display: none;
+}
+
+.pui-lightbox-caption-text {
+    margin: 0.3em 0 0.1em 0;
+    float:left;
+}
+
+.pui-lightbox-close {
+    float:right;
+    margin:0;
+    padding:1px;
+}
+
+.pui-lightbox-close.ui-state-hover {
+    padding: 0;
+}.pui-menu {
+    width: 12.5em;
+    padding:0.3em;
+    position:relative;
+}
+
+.pui-menu.pui-menu-dynamic {
+    position: absolute;
+    display: none;
+    z-index: 100000;
+}
+
+.pui-menu-list {
+    position:static;
+}
+
+.pui-menu .pui-menu-list .pui-menuitem {
+    border:none;
+}
+
+.pui-menu .pui-menu-list .ui-widget-header {
+    clear:both;
+    float:left;
+    width:98%;
+    margin:1px 0;
+}
+
+.pui-menu .pui-menuitem {
+    width:100%;
+    float:left;
+    clear:both;
+    margin:1px 0;
+    padding:0;
+}
+
+.pui-menu .pui-menuitem-parent {
+    width:100%;
+    float:left;
+    clear:both;
+    margin:1px 0;
+    padding:0;
+}
+
+.pui-menu .pui-menuitem-link {
+    display:block;
+    width:92%;
+    outline:none;
+    text-decoration:none;
+    font-weight:400;
+    border:solid 1px transparent;
+    float:left;
+    line-height:16px;
+    padding:0.3em;
+    cursor: pointer;
+}
+
+.pui-menu .pui-menuitem-link .pui-menuitem-icon {
+    display:inline-block;
+    float:left;
+}
+
+.pui-menu .pui-menuitem-text {
+    float:left;
+}
+
+.pui-menu .ui-widget-header h1,
+.pui-menu .ui-widget-header h2,
+.pui-menu .ui-widget-header h3,
+.pui-menu .ui-widget-header h4,
+.pui-menu .ui-widget-header h5,
+.pui-menu .ui-widget-header h6 {
+    float:left;
+    display:block;
+    font-size:1em;
+    margin:0 auto;
+    padding:0.3em 3%;
+}
+
+.pui-menu .pui-menu-parent .pui-menu-child {
+    display:none;
+    width:12.5em;
+    padding:0.3em;
+    position:absolute;
+    margin:0; 
+    outline:0; 
+    line-height:1.3; 
+    text-decoration:none; 
+    font-size:100%; 
+    list-style:none;
+}
+
+.pui-menu .pui-menu-parent {
+    position:relative;
+}
+
+.pui-menu .pui-menu-parent .ui-icon-triangle-1-e,
+.pui-menu .pui-menu-parent .ui-icon-triangle-1-s,
+.pui-menubar .pui-menu-child .ui-icon-triangle-1-s,
+.pui-menubar .pui-menu-child .ui-icon-triangle-1-s {
+    float:right;
+}
+
+.pui-menubutton {
+    padding:0;
+}
+
+.pui-menubutton .ui-button {
+    margin:0;
+}
+
+/** Menubar **/
+.pui-menubar {
+    width:auto;
+}
+
+.pui-menubar .pui-menuitem {
+    width:auto;
+    clear:none;
+}
+
+.pui-menubar .pui-menu-child .pui-menuitem {
+    width:100%;
+}
+
+.pui-menubar .pui-menu-child {
+    top:25px;
+    left:0;
+}
+
+.pui-menubar .pui-menuitem-link {
+    width:auto;
+    padding:0.4em 0.3em;
+}
+
+.pui-menubar .pui-menu-child .pui-menuitem-link {
+    width:92%;
+}
+
+.pui-menubar .ui-widget-header {
+    clear:none;
+    width:auto;
+    margin:0 3px 0 0;
+}
+
+.pui-menubar .ui-widget-header h1,
+.pui-menubar .ui-widget-header h2,
+.pui-menubar .ui-widget-header h3,
+.pui-menubar .ui-widget-header h4,
+.pui-menubar .ui-widget-header h5,
+.pui-menubar .ui-widget-header h6 {
+    padding:0.4em 0.3em;
+}
+
+.pui-menubar .pui-menubar-options {
+    float: right;
+}
+
+.pui-menu .ui-separator {
+    width:98%;
+    height:0px;
+    float:left;
+    clear:both;
+    margin:1px 0 0 0;
+    padding:0;
+    border-top: 0px none;
+}
+
+/** MegaMenu **/
+.ui-megamenu td {
+    vertical-align: top;
+}
+
+.pui-menu.ui-megamenu .pui-menu-parent .pui-menu-child {
+    width:auto;
+}
+
+.pui-menu.ui-megamenu .pui-menu-child > table {
+    width:auto;
+}
+
+.pui-menu.ui-megamenu .pui-menu-child .pui-menu-list {
+    width: 12.5em;
+}
+
+/** Breadcrumb **/
+.pui-breadcrumb {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 5px 5px 7px 5px;
+}
+
+.pui-breadcrumb ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.pui-breadcrumb ul li {
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.pui-breadcrumb ul li span {
+    display: block;
+    overflow: hidden;
+}
+
+.pui-breadcrumb ul li .pui-menuitem-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    float: left; 
+    margin-top:3px;
+}
+
+.pui-breadcrumb ul li a.ui-icon-home {
+    padding: 0;
+    margin-top: 1px;
+    overflow: hidden;
+}
+
+.pui-breadcrumb-chevron{
+    float:left;
+    margin-top:2px;
+}
+           
+/** SlideMenu **/
+.pui-slidemenu .pui-slidemenu-wrapper {
+    position: relative;
+}
+
+.pui-slidemenu .pui-slidemenu-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.pui-slidemenu .pui-menu-list {
+    position: absolute;
+    top: 0;
+}
+
+.pui-slidemenu .pui-menu-parent {
+    position: static;
+}
+
+.pui-slidemenu .pui-menu-child {
+    box-shadow : none;
+    border: 0 none;
+    background: none repeat scroll 0 0 transparent;
+}
+
+.pui-slidemenu-backward {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    margin-bottom: 0.4em;
+    padding: 0.2em;
+    cursor: pointer;
+    display: none;
+}
+
+.pui-slidemenu-backward .ui-icon {
+    float:left;
+}
+
+/** PanelMenu **/
+.pui-panelmenu { 
+    width: auto; 
+}
+
+.pui-panelmenu .pui-panelmenu-panel { 
+    padding: 0;
+    margin: 0;
+}
+
+.pui-panelmenu .pui-panelmenu-header { 
+    cursor: pointer; 
+    position: relative; 
+    margin: 0;
+    zoom: 1; 
+}
+
+.pui-panelmenu .pui-panelmenu-header a { 
+    display: block;
+    font-size: 1em;
+    padding: .5em .5em .5em 2.2em; 
+}
+
+.pui-panelmenu .pui-panelmenu-header .ui-icon { 
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.pui-panelmenu .pui-panelmenu-content { 
+    padding: 0.2em 0 0.2em 0.2em;
+    border-top: 0; 
+    margin-top: -2px; 
+    position: relative; 
+    top: 1px; 
+    overflow: auto; 
+    zoom: 1; 
+}
+
+.pui-panelmenu .pui-panelmenu-header.ui-state-disabled, 
+.pui-panelmenu .pui-panelmenu-header.ui-state-disabled a { 
+    cursor: default; 
+}
+
+.pui-panelmenu .pui-menu-list { 
+    position: static; 
+}
+
+.pui-panelmenu .pui-menuitem {
+    width:100%;
+    float:left;
+    clear:both;
+    margin:1px 0;
+    padding:0;
+}
+
+.pui-panelmenu .pui-menuitem-link {
+    display:block;
+    width:92%;
+    outline:none;
+    text-decoration:none;
+    font-weight:400;
+    border:solid 1px transparent;
+    float:left;
+    line-height:16px;
+    padding:0.3em;
+    cursor: pointer;
+}
+
+.pui-panelmenu .ui-icon {
+    display:inline-block;
+    float:left;
+}
+
+.pui-panelmenu .pui-menuitem-text {
+    float:left;
+}
+
+.pui-panelmenu .pui-menu-parent .pui-menu-list {
+    display: none;
+    margin-left: 20px;
+}
+
+/** TabMenu **/
+.pui-tabmenu { 
+    position: relative; 
+    zoom: 1; 
+}
+
+.pui-tabmenu .pui-tabmenu-nav { 
+    margin: 0;
+    padding: .2em .2em 0; 
+}
+
+.pui-tabmenu .pui-tabmenu-nav .pui-tabmenuitem { 
+    list-style: none; 
+    float: left; 
+    position: relative; 
+    margin: 0 .2em 1px 0;  
+    padding: 0; 
+    white-space: nowrap;
+    display: block;
+    border-bottom: 0;
+    top: 1px; 
+}
+
+.pui-tabmenu .pui-tabmenu-nav .pui-tabmenuitem a { 
+    float: left; 
+    padding: 0.5em 1em;
+    text-decoration: none; 
+}
+
+.pui-tabmenu .pui-tabmenu-nav .pui-tabmenuitem-hasicon a { 
+    padding: 0.5em 1em 0.5em 0.2em;
+}
+
+.pui-tabmenu .pui-tabmenu-nav .pui-tabmenuitem .ui-icon { 
+    float: left; 
+    cursor: pointer; 
+}
+
+.pui-notify {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	display: none;
+	padding: 10px;
+}
+
+.pui-notify-top {
+    top: 0;
+}
+
+.pui-notify-bottom {
+    bottom: 0;
+}
+ 
+.pui-notify-close {
+	position: absolute;
+	right: 3em;
+	top: 1em;
+	cursor: pointer;
+    opacity: 0.5;
+}
+
+.pui-notify-close:hover {
+    opacity: 1.0;
+}.pui-paginator {
+    margin:0px;
+    text-align: center;
+    padding:2px;
+}
+
+.pui-paginator .pui-paginator-top {
+    border-bottom:0px none;
+}
+
+.pui-paginator .pui-paginator-bottom {
+    border-top:0px none;
+}
+
+.pui-paginator .pui-paginator-page,
+.pui-paginator .pui-paginator-pages,
+.pui-paginator .pui-paginator-next,
+.pui-paginator .pui-paginator-last,
+.pui-paginator .pui-paginator-first,
+.pui-paginator .pui-paginator-prev,
+.pui-paginator .pui-paginator-current {
+	display: inline-block;
+	padding: 2px 6px;
+	zoom: 1;
+	margin-left: 1px;
+	margin-right: 1px;
+	text-decoration: none;
+	outline: none;
+}
+
+.pui-paginator .pui-paginator-page,
+.pui-paginator .pui-paginator-next,
+.pui-paginator .pui-paginator-last,
+.pui-paginator .pui-paginator-first,
+.pui-paginator .pui-paginator-prev{
+    cursor: pointer;
+}
+
+.pui-paginator .pui-paginator-current,
+.pui-paginator .pui-paginator-rpp-options {
+	margin-left: 1em;
+	margin-right: 1em;
+    background-image: none;
+}
+
+.pui-paginator .pui-paginator-next .ui-icon,
+.pui-paginator .pui-paginator-prev .ui-icon,
+.pui-paginator .pui-paginator-first .ui-icon,
+.pui-paginator .pui-paginator-last .ui-icon {
+	height: auto;
+	overflow: inherit;
+}
+
+.pui-paginator .pui-paginator-jtp-select option,
+.pui-paginator .pui-paginator-rpp-options option {
+    background-image: none;
+    border:0 none;
+    box-shadow:none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}.pui-panel {
+	padding: 0.2em;
+}
+
+.pui-panel .pui-panel-titlebar {
+	padding: 0.5em 1em 0.3em;
+}
+
+.pui-panel .pui-panel-title {
+	margin: 0.1em 16px 0.2em 0;
+}
+
+.pui-panel .pui-panel-titlebar-icon {
+	float: right;
+    cursor: pointer;
+}
+
+.pui-panel .pui-panel-titlebar-icon,
+.pui-panel .pui-panel-titlebar-icon:hover,
+.pui-panel .pui-panel-titlebar-icon:focus {
+	margin-left:0.2em;
+    margin-top:-0.1em;
+    *margin:-1.5em 0em 0em 0.2em;
+}
+
+.pui-panel .pui-panel-content {
+	border: 0;
+    background: none;
+	padding: 0.5em 1em;
+}
+
+.pui-panel .pui-panel-footer {
+	border-width:1px 0 0;
+	margin:0.5em 0 0;
+	padding:0.5em 1em;
+	text-align:left;
+}
+
+.pui-panel-collapsed-h .pui-panel-titlebar-icon,
+.pui-panel-collapsed-h .pui-panel-titlebar-icon:hover,
+.pui-panel-collapsed-h .pui-panel-titlebar-icon:focus {
+    *margin:-0.2em 0em 0em 0.1em;
+}
+
+.pui-panel.pui-panel-collapsed-h {
+    width: 42px;
+}
+
+.pui-panel.pui-panel-collapsed-h .pui-panel-title {
+    display:none;
+}            .pui-password-panel {
+    padding: 4px 10px;
+    width: 150px;
+    margin-top: 2px;
+}
+
+.pui-password-panel .pui-password-meter { 
+    height: 10px; 
+    background:transparent url("../../images/password-meter.png") no-repeat left top; 
+    padding: 0;
+    margin: 0;
+}
+
+.pui-password-info { 
+    margin-top: 4px;
+}
+
+.pui-password-panel-overlay { 
+    position: absolute; 
+}.pui-progressbar { 
+    height: 1.2em; 
+    text-align: left; 
+    position: relative;
+}
+
+.pui-progressbar .pui-progressbar-value {
+    margin: -1px; 
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    display: none;
+}
+
+.pui-progressbar .pui-progressbar-label {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    font-weight: bold;
+}.pui-radiobutton {
+    position: relative;
+    width: 16px;
+    margin: 2px 0;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.pui-radiobutton .pui-radiobutton-box {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.pui-radiobutton-icon {
+    margin-left: 1px;
+}.pui-rating-star,
+.pui-rating-cancel {
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+.pui-rating-star a,
+.pui-rating-cancel a {
+    width: 16px;
+    height: 15px;
+    display: block;
+    background: url("./images/rating.png") no-repeat 0 0;
+}
+
+.pui-rating-star a {
+    background-position: 0 -32px;
+}
+
+.pui-rating-star-on a {
+    background-position: 0 -48px;
+}
+
+.pui-rating-star-hover a {
+    background-position: 0 -64px;
+}
+
+.pui-rating-cancel-hover a {
+    background-position: 0 -16px;
+}
+
+.pui-rating.ui-state-disabled .pui-rating-star,
+.pui-rating.ui-state-disabled .pui-rating-cancel {
+    cursor: default;    
+}.pui-spinner {
+    display: inline-block;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.pui-spinner-input {
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 20px;
+}
+.pui-spinner-button {
+    cursor: default;
+    display: block;
+    font-size: 0.5em;
+    height: 50%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 16px;
+    z-index: 100;
+}
+.pui-spinner .ui-icon {
+    left: 0;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+}
+.pui-spinner-up {
+    top: 0;
+}
+.pui-spinner-down {
+    bottom: 0;
+}
+.pui-spinner .ui-icon-triangle-1-s {
+    background-position: -65px -16px;
+}
+
+.pui-spinner .ui-icon-triangle-1-n {
+    margin-top: -9px;
+}.pui-tabview {
+    position: relative; 
+    padding: .2em; 
+    zoom: 1; 
+} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+
+.pui-tabview .pui-tabview-nav { 
+    margin: 0;
+}
+
+.pui-tabview .pui-tabview-nav li { 
+    list-style: none; 
+    float: left; 
+    position: relative; 
+    margin: 0 .2em 1px 0;  
+    padding: 0; 
+    white-space: nowrap; 
+}
+
+.pui-tabview .pui-tabview-nav li a { 
+    float: left; 
+    padding: .5em 1em; 
+    text-decoration: none; 
+}
+
+.pui-tabview .pui-tabview-nav li.pui-tabview-selected a, 
+.pui-tabview .pui-tabview-nav li.ui-state-disabled a, 
+.pui-tabview .pui-tabview-nav li.ui-state-processing a { 
+    cursor: text; 
+}
+
+.pui-tabview .pui-tabview-nav li a, 
+.pui-tabview.pui-tabview-collapsible .pui-tabview-nav li.pui-tabview-selected a { 
+    cursor: pointer; 
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.pui-tabview .pui-tabview-panel { 
+    border-width: 0; 
+    padding: 1em 1.4em; 
+    background: none; 
+}
+
+.pui-tabview .pui-tabview-nav li { 
+    display: block; 
+}
+
+.pui-tabview .pui-tabview-nav li .ui-icon { 
+    float: left; 
+    margin: 0.4em 0.2em 0 0; 
+    cursor: pointer; 
+}
+
+/* per orientation settings */
+/* top and bottom */
+.pui-tabview.pui-tabview-top > .pui-tabview-nav li { 
+    border-bottom: 0;
+    top: 1px; 
+}
+
+.pui-tabview.pui-tabview-top > .pui-tabview-nav { 
+    padding: .2em .2em 0; 
+}
+
+.pui-tabview.pui-tabview-bottom > .pui-tabview-nav { 
+    padding: 0 .2em .2em; 
+}
+
+.pui-tabview.pui-tabview-bottom > .pui-tabview-nav li { 
+    border-top: 0;
+}
+
+/* left and right*/
+.pui-tabview-left:after,
+.pui-tabview-right:after {
+    clear:both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.pui-tabview-left > .pui-tabview-nav {
+    float:left;
+    width:23%;
+    height:300px;
+    background-image: none;
+    padding-top:1px;
+}
+
+.pui-tabview-left > .pui-tabview-panels {
+    float:right;
+    width:75%;
+}
+
+.pui-tabview.pui-tabview-left > .pui-tabview-nav li,
+.pui-tabview.pui-tabview-right > .pui-tabview-nav li{
+    display: block;
+    float: right;
+    white-space: normal;
+    width: 98%;
+}
+
+.pui-tabview.pui-tabview-left > .pui-tabview-nav li {
+    margin:0 0 1px 0.2em;
+    border-right:0 none;
+}
+
+.pui-tabview.pui-tabview-right > .pui-tabview-nav {
+    float:right;
+    width:23%;
+    height:300px;
+    background-image: none;
+    padding-top:1px;
+}
+
+.pui-tabview.pui-tabview-right > .pui-tabview-panels {
+    float:left;
+    width:75%;
+}
+
+.pui-tabview.pui-tabview-right > .pui-tabview-nav li {
+    margin:0 0.2em 1px 0;
+    border-left:0 none;
+}.pui-terminal {
+    height: 300px;
+    overflow: auto;
+    padding: 3px;
+}
+
+.pui-terminal-input {
+    border: 0 none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    margin: 0 0 0 2px;
+    width: 75%;
+    outline: none;
+    vertical-align: baseline;
+}
+
+.pui-terminal-command {
+    margin-left: 2px;
+    -moz-margin-start: 3px;
+}
+
+.pui-terminal-input::-ms-clear {
+    display: none;
+}.pui-tooltip {
+    position:absolute;
+    display:none;
+    padding:3px 5px;
+}
+/*! jQuery UI - v1.9.2 - 2012-11-23
+* Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */
+
+/* Layout helpers
+----------------------------------*/
+
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*!
+ * jQuery UI Resizable 1.9.2
+ * http://jqueryui.com
+ *
+ * Copyright 2012 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+/*
+
+
+ */
+.dp-highlighter
+{
+	font-family: "Consolas", "Courier New", Courier, mono, serif;
+	font-size: 12px;
+	background-color: #E7E5DC;
+	width: 99%;
+	overflow: auto;
+	margin: 18px 0 18px 0 !important;
+	padding-top: 1px; /* adds a little border on top when controls are hidden */
+}
+
+/* clear styles */
+.dp-highlighter ol,
+.dp-highlighter ol li,
+.dp-highlighter ol li span 
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.dp-highlighter a,
+.dp-highlighter a:hover
+{
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar,
+.dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	list-style: decimal; /* for ie */
+	background-color: #fff;
+	margin: 0px 0px 1px 45px !important; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #5C5C5C;
+}
+
+.dp-highlighter.nogutter ol,
+.dp-highlighter.nogutter ol li
+{
+	list-style: none !important;
+	margin-left: 0px !important;
+}
+
+.dp-highlighter ol li,
+.dp-highlighter .columns div
+{
+	list-style: decimal-leading-zero; /* better look for others, override cascade from OL */
+	list-style-position: outside !important;
+	border-left: 3px solid #6CE26C;
+	background-color: #F8F8F8;
+	color: #5C5C5C;
+	padding: 0 3px 0 10px !important;
+	margin: 0 !important;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li,
+.dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	background-color: #F8F8F8;
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #FFF;
+	color: inherit;
+}
+
+.dp-highlighter ol li span
+{
+	color: black;
+	background-color: inherit;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+	background-color: #f8f8f8;
+	padding-bottom: 10px;
+	border-left: 3px solid #6CE26C;
+}
+
+.dp-highlighter.nogutter .tools
+{
+	border-left: 0;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: #a0a0a0;
+	background-color: inherit;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	background-color: inherit;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; color: #333; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; background-color: inherit; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; color: #333; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; color: #333; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-highlighter .comment, .dp-highlighter .comments { color: #008200; background-color: inherit; }
+.dp-highlighter .string { color: blue; background-color: inherit; }
+.dp-highlighter .keyword { color: #069; font-weight: bold; background-color: inherit; }
+.dp-highlighter .preprocessor { color: gray; background-color: inherit; }

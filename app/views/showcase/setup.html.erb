@@ -5,7 +5,7 @@
   <h3>Install PrimeRails</h3>
   <p>Include these lines in the Gemfile to install the gems from <a href="http://rubygems.org" >RubyGems.org</a> </>
   <pre name="code" class="ruby">
-gem 'jquery-rails', '&lt; 3.0.0'
+gem 'jquery-rails', '2.1.4'
 gem 'prime-rails'
   </pre>    
 
@@ -19,5 +19,10 @@ gem 'prime-rails'
   <pre name="code" class="ruby">
      rails g primerails:install
   </pre>
+  
+  <p>Add theme.css manually into your layout:<p/>
+  <pre name="code" class="xml">
+&lt;%= stylesheet_link_tag &quot;themes/aristo/theme.css&quot; %&gt;
+  </pre>  
 
 </div>

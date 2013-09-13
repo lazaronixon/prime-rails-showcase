@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require jquery-ui
-//= require primeui
+//= require prime-ui
 //= require primefaces-core
 //= require primefaces-rails
-//= require sh
 //= require_tree .
