@@ -17,6 +17,7 @@ Showcase::Application.routes.draw do
   get "showcase/dropdown"  
   get "showcase/themes"   
   get "showcase/setup"
+  get "showcase/accordion"  
   
   post "ppr/setfirstname"  
   post "ppr/setfirstname_return"   

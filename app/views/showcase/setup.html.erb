@@ -13,16 +13,13 @@ gem 'prime-rails'
   <pre name="code" class="ruby">
      bundle install
   </pre>
-
   
-  <p>Then run the PrimeRails generator to add includes into your assets:<p/>
-  <pre name="code" class="ruby">
-     rails g primerails:install
-  </pre>
-  
-  <p>Add theme.css manually into your layout:<p/>
+  <p>Add assets into your layout:<p/>
   <pre name="code" class="xml">
-&lt;%= stylesheet_link_tag &quot;themes/aristo/theme.css&quot; %&gt;
+&lt;%= stylesheet_link_tag &quot;prime-ui&quot; %&gt;
+&lt;%= stylesheet_link_tag &quot;aristo/theme&quot;, id: 'theme' %&gt; 
+
+&lt;%= javascript_include_tag &quot;prime-ui&quot; %&gt;
   </pre>  
 
 </div>

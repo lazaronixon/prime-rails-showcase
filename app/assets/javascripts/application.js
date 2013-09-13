@@ -11,8 +11,4 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-ui
-//= require prime-ui
-//= require primefaces-core
-//= require primefaces-rails
 //= require_tree .

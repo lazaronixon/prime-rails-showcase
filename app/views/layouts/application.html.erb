@@ -5,9 +5,12 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <title>PrimeRails</title>
-    <%= stylesheet_link_tag "application" %>
-    <%= stylesheet_link_tag "themes/aristo/theme.css" %>    
+    <%= stylesheet_link_tag "application" %>    
+    <%= stylesheet_link_tag "prime-ui" %>
+    <%= stylesheet_link_tag "aristo/theme", id: 'theme' %> 
+    
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "prime-ui" %>
     <%= csrf_meta_tags %>        
   </head>
   <body>
@@ -33,6 +36,7 @@
               <ul>
                 <li class="widgets-header">Widgets</li>
                 <li><%= link_to 'Ajax',showcase_ajax_path %></li>                           
+                <li><%= link_to 'Accordion',showcase_accordion_path %></li>
                 <li><%= link_to 'Button',showcase_button_path %></li>           
                 <li><%= link_to 'Inputtext',showcase_inputtext_path %></li>                
                 <li><%= link_to 'Inputtextarea',showcase_inputtextarea_path %></li>
