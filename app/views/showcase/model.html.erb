@@ -1,0 +1,20 @@
+<h1 class="widget-title">Model</h1>
+<p>Creates a form that allows the user to create or update the attributes of a specific model object.</p>
+
+<%= form_for :person do |f| %>
+  First name: <%= f.p_text_field :first_name %> <br />
+  Last name : <%= f.p_text_field :last_name %><br />
+  Biography : <%= f.p_text_area :biography %><br />
+  Admin?    : <%= f.p_check_box :admin %><br /> 
+  <%= f.p_button(id: 'submit') %>
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'inputtext.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+    </pre>
+<%  end %>
+
+
+
+  <%= p_tabview('doc') %>

@@ -18,6 +18,9 @@ Showcase::Application.routes.draw do
   get "showcase/themes"   
   get "showcase/setup"
   get "showcase/accordion"  
+  get "showcase/radiobutton"  
+  get "showcase/listbox"  
+   get "showcase/model" 
   
   post "ppr/setfirstname"  
   post "ppr/setfirstname_return"   

@@ -1,0 +1,13 @@
+<h1 class="widget-title">Dropdown</h1>
+<p>Dropdown is an advanced widget to select an item from a collection.</p>
+
+<h3>Basic</h3>  
+<%= p_select_tag('basic', options_for_select(@dropdown_options),listbox: 'true') %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'dropdown.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+</pre>
+<%  end %>
+
+<%= p_tabview('doc') %>

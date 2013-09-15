@@ -1,0 +1,46 @@
+<h1 class="widget-title">RadioButton</h1>
+<p>RadioButton is an extension to standard radio button element with skinning capabilities.</p>
+
+<%= p_radio_button('rdGroup') do %>
+  <table>
+    <tr>
+      <td><%= radio_button_tag('rd', '1') %></td>
+      <td><%= label_tag 'rd_1', 'Option 1' %></td>
+    </tr> 
+    <tr>
+      <td><%= radio_button_tag('rd', '2') %></td>
+      <td><%= label_tag 'rd_2', 'Option 2' %></td>
+    </tr> 
+    <tr>
+      <td><%= radio_button_tag('rd', '3') %></td>
+      <td><%= label_tag 'rd_3', 'Option 3' %></td>
+    </tr>     
+  </table>        
+<% end %>
+
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'radiobutton.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;%= p_radio_button('rdGroup') do %&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;%= radio_button_tag('rd', '1') %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= label_tag 'rd_1', 'Option 1' %&gt;&lt;/td&gt;
+    &lt;/tr&gt; 
+    &lt;tr&gt;
+      &lt;td&gt;&lt;%= radio_button_tag('rd', '2') %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= label_tag 'rd_2', 'Option 2' %&gt;&lt;/td&gt;
+    &lt;/tr&gt; 
+    &lt;tr&gt;
+      &lt;td&gt;&lt;%= radio_button_tag('rd', '3') %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= label_tag 'rd_3', 'Option 3' %&gt;&lt;/td&gt;
+    &lt;/tr&gt;     
+  &lt;/table&gt;        
+&lt;% end %&gt;
+    </pre>
+  <%  end %>
+
+
+
+  <%= p_tabview('doc') %>
