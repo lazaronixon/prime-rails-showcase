@@ -2,18 +2,40 @@
 <p>Creates a form that allows the user to create or update the attributes of a specific model object.</p>
 
 <%= form_for :person do |f| %>
-  First name: <%= f.p_text_field :first_name %> <br />
-  Last name : <%= f.p_text_field :last_name %><br />
-  Biography : <%= f.p_text_area :biography %><br />
-  Admin?    : <%= f.p_check_box :admin %><br /> 
-  <%= f.p_button(id: 'submit') %>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :first_name %>
+    <%= f.p_text_field :first_name %>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :last_name %>
+    <%= f.p_text_field :last_name %> 
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :biography %>
+    <%= f.p_text_area :biography %>  
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :admin %>
+    <%= f.p_check_box :admin %>  
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :age %>
+    <%= f.p_select :age, (18..99) %>  
+  </div>  
+
+  <%= f.p_button(id: 'submit') %>  
 <% end %>
 
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'inputtext.html.erb',for: 'doc') do%>
     <pre name="code" class="xml">
     </pre>
-<%  end %>
+  <%  end %>
 
 
 
