@@ -1,11 +1,8 @@
-class PersonController < ApplicationController
+class PersonController < ApplicationController  
   
   def create
-    @person = Person.new(person_params)  
-    
-    respond_to do |format|
-      format.html { render action: 'show' }              
-    end        
+    @person = Person.new(person_params)     
+    render action: 'show'    
   end       
   
   private

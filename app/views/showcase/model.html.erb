@@ -54,7 +54,7 @@
     </pre>
   <%  end %>
 
-<%= p_tab('tab2',title: 'person/show.html.erb',for: 'doc') do%>
+<%= p_tab('tab2',title: 'show.html.erb',for: 'doc') do%>
     <pre name="code" class="xml">
 &lt;p&gt;
   &lt;strong&gt;First Name:&lt;/strong&gt;
@@ -80,16 +80,13 @@
     </pre>
   <%  end %>
 
-<%= p_tab('tab2',title: 'person_controller.erb',for: 'doc') do%>
+<%= p_tab('tab2',title: 'person_controller.rb',for: 'doc') do%>
     <pre name="code" class="ruby">
-class PersonController &lt; ApplicationController
+class PersonController &lt; ApplicationController  
   
   def create
-    @person = Person.new(person_params)  
-    
-    respond_to do |format|
-      format.html { render action: 'show' }              
-    end        
+    @person = Person.new(person_params)     
+    render action: 'show'    
   end       
   
   private
@@ -97,6 +94,22 @@ class PersonController &lt; ApplicationController
   def person_params
     params.require(:person)
   end    
+  
+end
+    </pre>
+  <%  end %>
+
+<%= p_tab('tab2',title: 'person.rb',for: 'doc') do%>
+    <pre name="code" class="ruby">
+class Person
+  
+  attr_accessor :first_name,:last_name,:biography,:admin,:age
+
+  def initialize(attributes = {})
+    attributes.each do |name,value|
+      send(&quot;#{name}=&quot;,value)
+    end
+  end
   
 end
     </pre>
