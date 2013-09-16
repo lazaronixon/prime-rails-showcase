@@ -20,10 +20,11 @@ Showcase::Application.routes.draw do
   get "showcase/accordion"  
   get "showcase/radiobutton"  
   get "showcase/listbox"  
-   get "showcase/model" 
+  get "showcase/model" 
+  get "person/show" 
   
   post "ppr/setfirstname"  
-  post "ppr/setfirstname_return"   
+  post "person/create"   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

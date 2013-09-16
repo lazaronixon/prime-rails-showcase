@@ -20,6 +20,6 @@ class ShowcaseController < ApplicationController
       'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'rocket', 'sam', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic',  
       'ui-darkness', 'ui-lightness', 'vader']        
     @dropdown_content = %{<img src="resources/demo/images/themes/{option}.png"/><span style="float:right;font-size:14px">{option}</span>}
-  end    
+  end   
   
 end

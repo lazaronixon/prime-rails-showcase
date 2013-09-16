@@ -1,0 +1,21 @@
+<p>
+  <strong>First Name:</strong>
+  <%= @person.first_name  %> 
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @person.last_name  %> 
+</p>
+<p>
+  <strong>Biography:</strong>
+  <%= @person.biography  %> 
+</p>
+<p>
+  <strong>Admin:</strong>
+  <%= @person.admin ? 'Yes' : 'No'  %> 
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @person.age  %> 
+</p>
+<%= p_button_to 'Back', showcase_model_path, method: 'get',id: 'btnBack' %>

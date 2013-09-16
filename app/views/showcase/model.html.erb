@@ -1,39 +1,104 @@
 <h1 class="widget-title">Model</h1>
 <p>Creates a form that allows the user to create or update the attributes of a specific model object.</p>
 
-<%= form_for :person do |f| %>
-
+<%= form_for :person, url: '/person/create' do |f| %>
   <div style="margin-bottom: 10px;">
     <%= f.label :first_name %>
     <%= f.p_text_field :first_name %>
   </div>
-
   <div style="margin-bottom: 10px;">
     <%= f.label :last_name %>
     <%= f.p_text_field :last_name %> 
   </div>
-
   <div style="margin-bottom: 10px;">
     <%= f.label :biography %>
     <%= f.p_text_area :biography %>  
   </div>
-
   <div style="margin-bottom: 10px;">
     <%= f.label :admin %>
     <%= f.p_check_box :admin %>  
   </div>
-
   <div style="margin-bottom: 10px;">
     <%= f.label :age %>
     <%= f.p_select :age, (18..99) %>  
   </div>  
-
   <%= f.p_button(id: 'submit') %>  
 <% end %>
 
 <h3>Documentation</h3>
-<%= p_tab('tab1',title: 'inputtext.html.erb',for: 'doc') do%>
+<%= p_tab('tab1',title: 'model.html.erb',for: 'doc') do%>
     <pre name="code" class="xml">
+    &lt;%= form_for :person, url: '/person/create' do |f| %&gt;
+      &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;%= f.label :first_name %&gt;
+        &lt;%= f.p_text_field :first_name %&gt;
+      &lt;/div&gt;
+      &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;%= f.label :last_name %&gt;
+        &lt;%= f.p_text_field :last_name %&gt; 
+      &lt;/div&gt;
+      &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;%= f.label :biography %&gt;
+        &lt;%= f.p_text_area :biography %&gt;  
+      &lt;/div&gt;
+      &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;%= f.label :admin %&gt;
+        &lt;%= f.p_check_box :admin %&gt;  
+      &lt;/div&gt;
+      &lt;div style=&quot;margin-bottom: 10px;&quot;&gt;
+        &lt;%= f.label :age %&gt;
+        &lt;%= f.p_select :age, (18..99) %&gt;  
+      &lt;/div&gt;  
+      &lt;%= f.p_button(id: 'submit') %&gt;  
+    &lt;% end %&gt;
+    </pre>
+  <%  end %>
+
+<%= p_tab('tab2',title: 'person/show.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;p&gt;
+  &lt;strong&gt;First Name:&lt;/strong&gt;
+  &lt;%= @person.first_name  %&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;strong&gt;Last Name:&lt;/strong&gt;
+  &lt;%= @person.last_name  %&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;strong&gt;Biography:&lt;/strong&gt;
+  &lt;%= @person.biography  %&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;strong&gt;Admin:&lt;/strong&gt;
+  &lt;%= @person.admin ? 'Yes' : 'No'  %&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;strong&gt;Age:&lt;/strong&gt;
+  &lt;%= @person.age  %&gt; 
+&lt;/p&gt;
+&lt;%= p_button_to 'Back', showcase_model_path, method: 'get',id: 'btnBack' %&gt;
+    </pre>
+  <%  end %>
+
+<%= p_tab('tab2',title: 'person_controller.erb',for: 'doc') do%>
+    <pre name="code" class="ruby">
+class PersonController &lt; ApplicationController
+  
+  def create
+    @person = Person.new(person_params)  
+    
+    respond_to do |format|
+      format.html { render action: 'show' }              
+    end        
+  end       
+  
+  private
+  
+  def person_params
+    params.require(:person)
+  end    
+  
+end
     </pre>
   <%  end %>
 
