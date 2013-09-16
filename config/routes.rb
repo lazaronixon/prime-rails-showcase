@@ -22,6 +22,7 @@ Showcase::Application.routes.draw do
   get "showcase/listbox"  
   get "showcase/model" 
   get "person/show" 
+  get "showcase/spinner"
   
   post "ppr/setfirstname"  
   post "person/create"   
