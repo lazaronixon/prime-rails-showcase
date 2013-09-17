@@ -1,0 +1,39 @@
+<h1 class="widget-title">Menu</h1>
+<p>InputText is an extension to standard inputText with skinning capabilities.</p>
+
+<h3>Default</h3>
+<%= p_menu('pm1') do %>
+  <%= p_submenu('File') do %>      
+      <%= p_menu_item(showcase_menu_path, value: 'New', icon: 'ui-icon-document') %>
+      <%= p_menu_item(showcase_menu_path, value: 'Open', icon: 'ui-icon-folder-open') %>      
+  <% end %>
+  <%= p_submenu('Edit') do %>      
+      <%= p_menu_item(showcase_menu_path, value: 'Undo', icon: 'ui-icon-arrowreturnthick-1-w') %>
+      <%= p_menu_item(showcase_menu_path, value: 'Redo', icon: 'ui-icon-arrowreturnthick-1-e') %>      
+  <% end %>
+<% end %>
+
+<h3>Popup</h3>
+<%= p_button_tag('Show',id: 'pm2trigger') %>
+
+<%= p_menu('pm2', popup: 'true',trigger: 'pm2trigger' ) do %>
+  <%= p_submenu('File') do %>      
+      <%= p_menu_item(showcase_menu_path, value: 'New', icon: 'ui-icon-document') %>
+      <%= p_menu_item(showcase_menu_path, value: 'Open', icon: 'ui-icon-folder-open') %>      
+  <% end %>
+  <%= p_submenu('Edit') do %>      
+      <%= p_menu_item(showcase_menu_path, value: 'Undo', icon: 'ui-icon-arrowreturnthick-1-w') %>
+      <%= p_menu_item(showcase_menu_path, value: 'Redo', icon: 'ui-icon-arrowreturnthick-1-e') %>      
+  <% end %>
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'inputtext.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>
