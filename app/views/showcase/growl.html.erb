@@ -1,0 +1,64 @@
+<h1 class="widget-title">Growl</h1>
+<p>Growl is a notification widget to display messages as an overlay.</p>
+
+<%= p_growl('growl',info_title: 'Info',warn_title: 'Warning',error_title: 'Error') %>
+
+<table>
+  <tr>
+    <td><%= p_button_to('Info',showcase_growl_info_path, id: 'btn-info') %></td>                  
+    <td><%= p_button_to('Warning',showcase_growl_warn_path, id: 'btn-warn') %></td>
+    <td><%= p_button_to('Error',showcase_growl_error_path, id: 'btn-error') %></td>
+    <td><%= p_button_to('Multiple',showcase_growl_multiple_path, id: 'btn-multiple') %></td>
+  </tr>
+</table>  
+
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'growl.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;%= p_growl('growl',info_title: 'Info',warn_title: 'Warning',error_title: 'Error') %&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;%= p_button_to('Info',showcase_growl_info_path, id: 'btn-info') %&gt;&lt;/td&gt;                  
+    &lt;td&gt;&lt;%= p_button_to('Warning',showcase_growl_warn_path, id: 'btn-warn') %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%= p_button_to('Error',showcase_growl_error_path, id: 'btn-error') %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%= p_button_to('Multiple',showcase_growl_multiple_path, id: 'btn-multiple') %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+  <%  end %>
+
+<%= p_tab('tab2',title: 'showcase_controller.rb',for: 'doc') do%>
+    <pre name="code" class="ruby">
+class ShowcaseController &lt; ApplicationController
+  
+  def growl_info
+    flash[:info] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end
+  
+  def growl_warn
+    flash[:warning] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end  
+  
+  def growl_error
+    flash[:error] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end    
+  
+  def growl_multiple
+    flash[:info] = 'Message Detail here.'
+    flash[:warning] = 'Message Detail here.'
+    flash[:error] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end     
+  
+end
+    </pre>
+  <%  end %>
+
+
+
+  <%= p_tabview('doc') %>

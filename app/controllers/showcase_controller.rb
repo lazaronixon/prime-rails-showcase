@@ -20,6 +20,28 @@ class ShowcaseController < ApplicationController
       'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'rocket', 'sam', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic',  
       'ui-darkness', 'ui-lightness', 'vader']        
     @dropdown_content = %{<img src="resources/demo/images/themes/{option}.png"/><span style="float:right;font-size:14px">{option}</span>}
-  end   
+  end  
+  
+  def growl_info
+    flash[:info] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end
+  
+  def growl_warn
+    flash[:warning] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end  
+  
+  def growl_error
+    flash[:error] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end    
+  
+  def growl_multiple
+    flash[:info] = 'Message Detail here.'
+    flash[:warning] = 'Message Detail here.'
+    flash[:error] = 'Message Detail here.'
+    redirect_to '/showcase/growl'
+  end     
   
 end
