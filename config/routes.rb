@@ -26,6 +26,7 @@ Showcase::Application.routes.draw do
   get "showcase/growl"
   post "showcase/growl"
   get "showcase/menu"
+  get "showcase/menubar"
   
   post "ppr/setfirstname"  
   post "person/create" 
