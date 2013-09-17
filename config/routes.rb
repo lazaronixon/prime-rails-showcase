@@ -27,7 +27,8 @@ Showcase::Application.routes.draw do
   post "showcase/growl"
   
   post "ppr/setfirstname"  
-  post "person/create"   
+  post "person/create" 
+  post "showcase/model"  
   post "showcase/growl_info"   
   post "showcase/growl_error"   
   post "showcase/growl_warn"   
