@@ -1,0 +1,106 @@
+<h1 class="widget-title">Menubar</h1>
+<p>Right click anywhere on this page to view the context-menu options.</p>
+
+<%= p_context_menu('cm1') do %>
+
+  <%= p_submenubar(label: 'File',icon: 'ui-icon-document') do %> 
+    <%= p_submenubar(label: 'New',icon: 'ui-icon-contact') do %> 
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'Project') %>
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'Other') %>  
+    <% end %>
+    <%= p_menubar_item(showcase_contextmenu_path, value: 'Open') %>
+    <%= p_menubar_item(showcase_contextmenu_path, value: 'Quit') %>
+  <% end %>
+
+  <%= p_submenubar(label: 'Edit',icon: 'ui-icon-pencil') do %> 
+    <%= p_menubar_item(showcase_contextmenu_path, value: 'Undo', icon: 'ui-icon-arrowreturnthick-1-w') %>
+    <%= p_menubar_item(showcase_contextmenu_path, value: 'Redo', icon: 'ui-icon-arrowreturnthick-1-e') %>  
+  <% end %>
+
+  <%= p_submenubar(label: 'Help',icon: 'ui-icon-help') do %> 
+    <%= p_menubar_item(showcase_contextmenu_path, value: 'Contents') %>    
+    <%= p_submenubar(label: 'Search',icon: 'ui-icon-search') do %>   
+      <%= p_submenubar(label: 'Text') do %>       
+        <%= p_menubar_item(showcase_contextmenu_path, value: 'Workspace') %>  
+      <% end %> 
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'File') %>  
+    <% end %>    
+  <% end %>
+
+  <%= p_submenubar(label: 'Actions',icon: 'ui-icon-gear') do %> 
+    <%= p_submenubar(label: 'Ajax', icon: 'ui-icon-refresh') do %>       
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'Save', icon: 'ui-icon-disk') %>  
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'Update', icon: 'ui-icon-arrowrefresh-1-w') %>  
+    <% end %> 
+    <%= p_submenubar(label: 'Non-Ajax', icon: 'ui-icon-document') do %>       
+      <%= p_menubar_item(showcase_contextmenu_path, value: 'Delete', icon: 'ui-icon-close') %>  
+    <% end %> 
+  <% end %>
+
+  <%= p_menubar_item(showcase_contextmenu_path, value: 'Quit', icon: 'ui-icon-close') %>
+
+<% end %>
+
+<h3>Specific Target</h3>
+<%=  image_tag("images/rails.png", id: 'image') %>
+
+<%= p_context_menu('cm2',target: 'image') do %>  
+  <%= p_menubar_item(showcase_contextmenu_path, value: 'Next', icon: 'ui-icon-triangle-1-e') %>
+  <%= p_menubar_item(showcase_contextmenu_path, value: 'Prev', icon: 'ui-icon-triangle-1-w') %>  
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'menubar.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;%= p_context_menu('cm1') do %&gt;
+
+  &lt;%= p_submenubar(label: 'File',icon: 'ui-icon-document') do %&gt; 
+    &lt;%= p_submenubar(label: 'New',icon: 'ui-icon-contact') do %&gt; 
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Project') %&gt;
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Other') %&gt;  
+    &lt;% end %&gt;
+    &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Open') %&gt;
+    &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Quit') %&gt;
+  &lt;% end %&gt;
+
+  &lt;%= p_submenubar(label: 'Edit',icon: 'ui-icon-pencil') do %&gt; 
+    &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Undo', icon: 'ui-icon-arrowreturnthick-1-w') %&gt;
+    &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Redo', icon: 'ui-icon-arrowreturnthick-1-e') %&gt;  
+  &lt;% end %&gt;
+
+  &lt;%= p_submenubar(label: 'Help',icon: 'ui-icon-help') do %&gt; 
+    &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Contents') %&gt;    
+    &lt;%= p_submenubar(label: 'Search',icon: 'ui-icon-search') do %&gt;   
+      &lt;%= p_submenubar(label: 'Text') do %&gt;       
+        &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Workspace') %&gt;  
+      &lt;% end %&gt; 
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'File') %&gt;  
+    &lt;% end %&gt;    
+  &lt;% end %&gt;
+
+  &lt;%= p_submenubar(label: 'Actions',icon: 'ui-icon-gear') do %&gt; 
+    &lt;%= p_submenubar(label: 'Ajax', icon: 'ui-icon-refresh') do %&gt;       
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Save', icon: 'ui-icon-disk') %&gt;  
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Update', icon: 'ui-icon-arrowrefresh-1-w') %&gt;  
+    &lt;% end %&gt; 
+    &lt;%= p_submenubar(label: 'Non-Ajax', icon: 'ui-icon-document') do %&gt;       
+      &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Delete', icon: 'ui-icon-close') %&gt;  
+    &lt;% end %&gt; 
+  &lt;% end %&gt;
+
+  &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Quit', icon: 'ui-icon-close') %&gt;
+
+&lt;% end %&gt;
+
+&lt;h3&gt;Specific Target&lt;/h3&gt;
+&lt;%=  image_tag(&quot;images/rails.png&quot;, id: 'image') %&gt;
+
+&lt;%= p_context_menu('cm2',target: 'image') do %&gt;  
+  &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Next', icon: 'ui-icon-triangle-1-e') %&gt;
+  &lt;%= p_menubar_item(showcase_contextmenu_path, value: 'Prev', icon: 'ui-icon-triangle-1-w') %&gt;  
+&lt;% end %&gt;
+    </pre>
+  <%  end %>
+
+
+  <%= p_tabview('doc') %>
