@@ -1,0 +1,43 @@
+<h1 class="widget-title">Inputtext</h1>
+<p>InputText is an extension to standard inputText with skinning capabilities.</p>
+
+<h3>Default</h3>
+<%= p_text_field_tag('rating',nil,type: 'hidden', rating: true) %>
+<br />
+
+<h3>Default value</h3>
+<%= p_text_field_tag('default', 5,type: 'hidden', rating: true) %>
+<br />
+
+<h3>No Cancel</h3>
+<%= p_text_field_tag('nocancel',nil,type: 'hidden',rating: true, cancel: false) %>
+<br />
+
+<h3>Read Only</h3>
+<%= p_text_field_tag('readonly',nil,type: 'hidden',rating: true,readonly: true, cancel: false) %>
+<br />
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'rating.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;h3&gt;Default&lt;/h3&gt;
+&lt;%= p_text_field_tag('rating',nil,type: 'hidden', rating: true) %&gt;
+&lt;br /&gt;
+
+&lt;h3&gt;Default value&lt;/h3&gt;
+&lt;%= p_text_field_tag('default', 5,type: 'hidden', rating: true) %&gt;
+&lt;br /&gt;
+
+&lt;h3&gt;No Cancel&lt;/h3&gt;
+&lt;%= p_text_field_tag('nocancel',nil,type: 'hidden',rating: true, cancel: false) %&gt;
+&lt;br /&gt;
+
+&lt;h3&gt;Read Only&lt;/h3&gt;
+&lt;%= p_text_field_tag('readonly',nil,type: 'hidden',rating: true,readonly: true, cancel: false) %&gt;
+&lt;br /&gt;
+    </pre>
+  <%  end %>
+
+
+
+  <%= p_tabview('doc') %>

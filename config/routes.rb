@@ -30,6 +30,7 @@ Showcase::Application.routes.draw do
   get "showcase/contextmenu"
   get "showcase/slidemenu"
   get "showcase/tieredmenu"
+  get "showcase/rating"
   
   post "ppr/setfirstname"  
   post "person/create" 
