@@ -2,37 +2,37 @@
 <p>Spinner is an input component to provide a numerical input via increment and decrement buttons.</p>
 
 <h3>Default</h3>
-<%= p_text_field_tag('default',nil,spinner: 'true') %>  
+<%= p_text_field_tag('default',nil,spinner: true) %>  
 
 <h3>Step</h3>
-<%= p_text_field_tag('step',nil,spinner: 'true',step: '0.25') %> 
+<%= p_text_field_tag('step',nil,spinner: true,step: '0.25') %> 
 
 <h3>Min-Max</h3>
-<%= p_text_field_tag('minmax',nil,spinner: 'true', min: '0',max: '100') %>  
+<%= p_text_field_tag('minmax',nil,spinner: true, min: '0',max: '100') %>  
 
 <h3>Prefix</h3>
-<%= p_text_field_tag('prefix','$10',spinner: 'true', prefix: '$') %>  
+<%= p_text_field_tag('prefix','$10',spinner: true, prefix: '$') %>  
 
 <h3>Disabled</h3>
-<%= p_text_field_tag('disabled',nil,spinner: 'true', disabled: 'disabled') %>  
+<%= p_text_field_tag('disabled',nil,spinner: true, disabled: 'disabled') %>  
 
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'spinner.html.erb',for: 'doc') do %>
     <pre name="code" class="xml">
 &lt;h3&gt;Default&lt;/h3&gt;
-&lt;%= p_text_field_tag('default',nil,spinner: 'true') %&gt;  
+&lt;%= p_text_field_tag('default',nil,spinner: true) %&gt;  
 
 &lt;h3&gt;Step&lt;/h3&gt;
-&lt;%= p_text_field_tag('step',nil,spinner: 'true',step: '0.25') %&gt; 
+&lt;%= p_text_field_tag('step',nil,spinner: true,step: '0.25') %&gt; 
 
 &lt;h3&gt;Min-Max&lt;/h3&gt;
-&lt;%= p_text_field_tag('minmax',nil,spinner: 'true', min: '0',max: '100') %&gt;  
+&lt;%= p_text_field_tag('minmax',nil,spinner: true, min: '0',max: '100') %&gt;  
 
 &lt;h3&gt;Prefix&lt;/h3&gt;
-&lt;%= p_text_field_tag('prefix','$10',spinner: 'true', prefix: '$') %&gt;  
+&lt;%= p_text_field_tag('prefix','$10',spinner: true, prefix: '$') %&gt;  
 
 &lt;h3&gt;Disabled&lt;/h3&gt;
-&lt;%= p_text_field_tag('disabled',nil,spinner: 'true', disabled: 'disabled') %&gt; 
+&lt;%= p_text_field_tag('disabled',nil,spinner: true, disabled: 'disabled') %&gt; 
     </pre>
   <%end%>
 

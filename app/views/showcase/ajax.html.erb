@@ -2,7 +2,7 @@
 <p>PrimeFaces Ajax provide a simple way to update any element without javascript</p>
 <%= form_tag('/ppr/setfirstname') do %>
   <%= p_text_field_tag('name',@firstname) %>
-  <%= p_button_tag('Submit', id: 'btn',ajax: 'true') %>
+  <%= p_button_tag('Submit', id: 'btn',ajax: true) %>
   <%=  content_tag('div',@firstname,id: 'display') %>            
 <%end%>
 
@@ -11,7 +11,7 @@
     <pre name="code" class="xml">
 &lt;%= form_tag('/ppr/setfirstname') do %&gt;
   &lt;%= p_text_field_tag('name',@firstname) %&gt;
-  &lt;%= p_button_tag('Submit', id: 'btn',ajax: 'true') %&gt;
+  &lt;%= p_button_tag('Submit', id: 'btn',ajax: true) %&gt;
 
   &lt;%=  content_tag('div',@firstname,id: 'display') %&gt;            
 &lt;%end%&gt;

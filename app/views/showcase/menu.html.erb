@@ -16,7 +16,7 @@
 <h3>Popup</h3>
 <%= p_button_tag('Show',id: 'pm2trigger') %>
 
-<%= p_menu('pm2', popup: 'true',trigger: 'pm2trigger' ) do %>
+<%= p_menu('pm2', popup: true,trigger: 'pm2trigger' ) do %>
   <%= p_submenu('File') do %>      
       <%= p_menu_item(showcase_menu_path, value: 'New', icon: 'ui-icon-document') %>
       <%= p_menu_item(showcase_menu_path, value: 'Open', icon: 'ui-icon-folder-open') %>      
@@ -45,7 +45,7 @@
 &lt;h3&gt;Popup&lt;/h3&gt;
 &lt;%= p_button_tag('Show',id: 'pm2trigger') %&gt;
 
-&lt;%= p_menu('pm2', popup: 'true',trigger: 'pm2trigger' ) do %&gt;
+&lt;%= p_menu('pm2', popup: true,trigger: 'pm2trigger' ) do %&gt;
   &lt;%= p_submenu('File') do %&gt;      
       &lt;%= p_menu_item(showcase_menu_path, value: 'New', icon: 'ui-icon-document') %&gt;
       &lt;%= p_menu_item(showcase_menu_path, value: 'Open', icon: 'ui-icon-folder-open') %&gt;      

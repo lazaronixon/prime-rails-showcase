@@ -5,10 +5,10 @@
 <%= p_select_tag('basic', options_for_select(@dropdown_options)) %>
 
 <h3>Editable</h3>  
-<%= p_select_tag('editable', options_for_select(@dropdown_options),editable: 'true') %>
+<%= p_select_tag('editable', options_for_select(@dropdown_options),editable: true) %>
 
 <h3>Filter</h3>  
-<%= p_select_tag('filter', options_for_select(@dropdown_options),filter: 'true') %>
+<%= p_select_tag('filter', options_for_select(@dropdown_options),filter: true) %>
 
 <h3>Content</h3>  
 <%= p_select_tag('content', nil,source: @dropdown_themes, content: @dropdown_content ) %>
@@ -21,10 +21,10 @@
 &lt;%= p_select_tag('basic', options_for_select(@dropdown_options)) %&gt;
 
 &lt;h3&gt;Editable&lt;/h3&gt;  
-&lt;%= p_select_tag('editable', options_for_select(@dropdown_options),editable: 'true') %&gt;
+&lt;%= p_select_tag('editable', options_for_select(@dropdown_options),editable: true) %&gt;
 
 &lt;h3&gt;Filter&lt;/h3&gt;  
-&lt;%= p_select_tag('filter', options_for_select(@dropdown_options),filter: 'true') %&gt;
+&lt;%= p_select_tag('filter', options_for_select(@dropdown_options),filter: true) %&gt;
 
 &lt;h3&gt;Content&lt;/h3&gt;  
 &lt;%= p_select_tag('content', nil,source: @dropdown_themes, content: @dropdown_content ) %&gt;

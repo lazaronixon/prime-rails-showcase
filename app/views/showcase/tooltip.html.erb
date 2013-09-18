@@ -1,7 +1,7 @@
 <h1 class="widget-title">Tooltip</h1>
 <p>Tooltip widget goes beyond basic browser provided tooltips by feauturing various theming, effects, events and custom content support.</p>
 
-<%= p_tooltip('default',global: 'true') %>
+<%= p_tooltip('default',global: true) %>
 
 <h3>Button</h3>
 <%= p_button_tag('Button',id: 'btn', title: 'Lorem ipsum dolor sit amet') %>
@@ -22,7 +22,7 @@
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'tooltip.html.erb',for: 'doc') do%>
 <pre name="code" class="xml">
-&lt;%= p_tooltip('default',global: 'true') %&gt;
+&lt;%= p_tooltip('default',global: true) %&gt;
 
 &lt;h3&gt;Button&lt;/h3&gt;
 &lt;%= p_button_tag('Button',id: 'btn', title: 'Lorem ipsum dolor sit amet') %&gt;
