@@ -5,23 +5,23 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <title>PrimeRails</title>
-    
+
     <style type="text/css">
       .dp-xml{
-        width: 1000px;
+        width: 1500px;
       }
       .dp-rb{
-        width: 1000px;
+        width: 1500px;
       }      
     </style>
-    
-    
+
+
     <%= stylesheet_link_tag "application" %>    
     <%= stylesheet_link_tag "prime-ui" %>
     <%= stylesheet_link_tag "aristo/theme", id: 'theme' %> 
-    
+
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "prime-ui" %>
+    <%= javascript_include_tag "prime-ui" %>    
     <%= csrf_meta_tags %>        
   </head>
   <body>
@@ -44,6 +44,11 @@
           </div>
           <div class="content-block">					
             <div id="sidebar">
+              <ul>
+                <li class="widgets-header">ThemeSwitcher</li>
+                <!-- Example for ThemeSwitcher -->
+                <li class="themes-container"><%= p_select_tag('themes_select', nil,source: @dropdown_themes, content: @dropdown_content, change: @dropdown_change) %></li>                                
+              </ul>
               <ul>
                 <li class="widgets-header">Widgets</li>
                 <li><%= link_to 'Ajax',showcase_ajax_path %></li>                           
@@ -73,13 +78,13 @@
                 <li><%= link_to 'Rating',showcase_rating_path %></li>
               </ul>
             </div>
-            
+
             <div id="content-demo">
               <%= yield %>
             </div>
-            
+
             <div style="clear: both" />            
-            
+
           </div>          
         </div>        
       </div>

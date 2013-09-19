@@ -31,18 +31,43 @@
 </pre>
 <%  end %>
 
-<%= p_tab('tab2',title: 'showcase_controller.html.erb',for: 'doc') do%>
+<%= p_tab('tab2',title: 'application.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+    &lt;!-- Example for ThemeSwitcher --&gt;
+    &lt;%= p_select_tag('themes_select', nil,source: @dropdown_themes, content: @dropdown_content, change: @dropdown_change) %&gt;            
+    </pre>
+<%  end %>
+
+<%= p_tab('tab3',title: 'showcase_controller.html.erb',for: 'doc') do%>
 <pre name="code" class="ruby">
 class ShowcaseController &lt; ApplicationController
   def dropdown
     @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
+  end
+end   
+</pre>
+<%  end %>
+
+<%= p_tab('tab4',title: 'application_controller.html.erb',for: 'doc') do%>
+<pre name="code" class="ruby">
+class ApplicationController &lt; ActionController::Base
+  before_filter:set_themes
+
+  def set_themes      
+    @dropdown_change = %{                      
+                      var themeLink = $('#theme');
+                      var newThemeURL = '/assets/' + $(this).val() + '/theme.css';
+                      themeLink.attr('href', newThemeURL);
+    }        
+    
     @dropdown_themes =  ['afterdark' , 'afternoon', 'afterwork', 'aristo', 'black-tie', 'blitzer', 'bluesky', 'bootstrap', 'casablanca', 'cruze',  
       'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'glass-x', 'home', 'hot-sneaks', 'humanity', 'le-frog', 'midnight',  
       'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'rocket', 'sam', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic',  
-      'ui-darkness', 'ui-lightness', 'vader']        
-    @dropdown_content = %{&lt;img src=&quot;resources/demo/images/themes/{option}.png&quot;/&gt;&lt;span style=&quot;float:right;font-size:14px&quot;&gt;{option}&lt;/span&gt;}
-  end
-end   
+      'ui-darkness', 'ui-lightness', 'vader']             
+    @dropdown_content = %{&lt;img src=&quot;/showcase/resources/demo/images/themes/{option}.png&quot;/&gt;&lt;span style=&quot;float:right;font-size:14px&quot;&gt;{option}&lt;/span&gt;}
+  end   
+  
+end 
 </pre>
 <%  end %>
 
