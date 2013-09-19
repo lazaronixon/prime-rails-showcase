@@ -1,0 +1,98 @@
+<style type="text/css">
+            .pui-lightbox-inline {
+                background-color: #ffffff;
+                text-align: center;
+            }
+</style>
+
+<h1 class="widget-title">Lightbox</h1>
+<p>LightBox is a modal overlay component to display images, videos, inline html content and iframes.</p>
+
+<h3>Images</h3>
+<%= p_lightbox('images') do %>
+
+  <%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos1.jpg', title: 'Sopranos 1')  do %>
+    <%= image_tag('demo/images/sopranos/sopranos1_small.jpg') %>
+  <% end %>
+
+  <%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos2.jpg', title: 'Sopranos 2')  do %>
+    <%= image_tag('demo/images/sopranos/sopranos2_small.jpg') %>
+  <% end %>
+
+  <%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos3.jpg', title: 'Sopranos 3')  do %>
+    <%= image_tag('demo/images/sopranos/sopranos3_small.jpg') %>
+  <% end %>
+
+  <%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos4.jpg', title: 'Sopranos 4')  do %>
+    <%= image_tag('demo/images/sopranos/sopranos4_small.jpg') %>
+  <% end %>
+  
+<% end %>
+
+<h3>Inline</h3>
+<%= p_lightbox('inline') do %>
+
+  <%= content_tag('a',href: '#', class: 'group')  do %>
+    View Content
+  <% end %>
+    
+  <%= content_tag('div', class: 'ui-helper-hidden')  do %>
+    <h2>PrimeRails</h2>
+    <%= image_tag('demo/images/logo.png',alt: nil) %>
+  <% end %>    
+  
+<% end %>
+    
+<h3>IFrame</h3>
+<%= p_lightbox('external', iframe: true, href: "http://www.primefaces.org") do %>
+  PrimeFaces Home
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'lightbox.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;h3&gt;Images&lt;/h3&gt;
+&lt;%= p_lightbox('images') do %&gt;
+
+  &lt;%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos1.jpg', title: 'Sopranos 1')  do %&gt;
+    &lt;%= image_tag('demo/images/sopranos/sopranos1_small.jpg') %&gt;
+  &lt;% end %&gt;
+
+  &lt;%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos2.jpg', title: 'Sopranos 2')  do %&gt;
+    &lt;%= image_tag('demo/images/sopranos/sopranos2_small.jpg') %&gt;
+  &lt;% end %&gt;
+
+  &lt;%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos3.jpg', title: 'Sopranos 3')  do %&gt;
+    &lt;%= image_tag('demo/images/sopranos/sopranos3_small.jpg') %&gt;
+  &lt;% end %&gt;
+
+  &lt;%= content_tag('a',href: '/assets/demo/images/sopranos/sopranos4.jpg', title: 'Sopranos 4')  do %&gt;
+    &lt;%= image_tag('demo/images/sopranos/sopranos4_small.jpg') %&gt;
+  &lt;% end %&gt;
+  
+&lt;% end %&gt;
+
+&lt;h3&gt;Inline&lt;/h3&gt;
+&lt;%= p_lightbox('inline') do %&gt;
+
+  &lt;%= content_tag('a',href: '#', class: 'group')  do %&gt;
+    View Content
+  &lt;% end %&gt;
+    
+  &lt;%= content_tag('div', class: 'ui-helper-hidden')  do %&gt;
+    &lt;h2&gt;PrimeRails&lt;/h2&gt;
+    &lt;%= image_tag('demo/images/logo.png',alt: nil) %&gt;
+  &lt;% end %&gt;    
+  
+&lt;% end %&gt;
+    
+&lt;h3&gt;IFrame&lt;/h3&gt;
+&lt;%= p_lightbox('external', iframe: true, href: &quot;http://www.primefaces.org&quot;) do %&gt;
+  PrimeFaces Home
+&lt;% end %&gt;
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>
