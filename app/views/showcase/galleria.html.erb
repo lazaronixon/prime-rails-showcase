@@ -1,0 +1,129 @@
+<h1 class="widget-title">Galleria</h1>
+<p>Galleria is a content gallery widget.</p>
+
+<h3>Default</h3>
+<%= p_galleria('images',panelWidth: 500, panelHeight: 313) do %>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria1.jpg',alt: "Galleria 1 Description",title: "Galleria 1")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria2.jpg',alt: "Galleria 2 Description",title: "Galleria 2")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria3.jpg',alt: "Galleria 3 Description",title: "Galleria 3")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria4.jpg',alt: "Galleria 4 Description",title: "Galleria 4")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria5.jpg',alt: "Galleria 5 Description",title: "Galleria 5")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria6.jpg',alt: "Galleria 6 Description",title: "Galleria 6")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria7.jpg',alt: "Galleria 7 Description",title: "Galleria 7")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria8.jpg',alt: "Galleria 8 Description",title: "Galleria 8")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria9.jpg',alt: "Galleria 9 Description",title: "Galleria 9")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria10.jpg',alt: "Galleria 10 Description",title: "Galleria 10")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria11.jpg',alt: "Galleria 11 Description",title: "Galleria 11")%>
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria12.jpg',alt: "Galleria 12 Description",title: "Galleria 12")%>  
+<% end %>
+
+<h3>Content</h3>
+<%= p_galleria('customcontent',autoPlay: false, customContent: true, showCaption: false,  panelWidth: 360, panelHeight: 200, frameWidth: 100, frameHeight: 60, effect: 'fold', effectSpeed: 500) do %>
+
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria1.jpg',alt: "Galleria 1 Description",title: "Galleria 1") do %>
+      Lorem ipsum dolor sit amet, explicabo sapien per elit et, sed sed non sit habitant elit leo, sollicitudin vitae pellentesque, blandit metus at donec. Aenean wisi tristique nulla suspendisse. 
+      Auctor non nam, ultrices nec penatibus ligula dapibus, neque congue scelerisque, dolor nec amet orci eleifend curabitur, morbi in. Sit feugiat non. 
+      A in nunc massa non, nihil pellentesque et laoreet porta lobortis, vel vivamus blandit et. Iaculis ut praesent ipsum praesent mauris, quisque elementum mi donec mi, etiam diam mauris viverra. 
+      Scelerisque faucibus eget pellentesque lacus, etiam eu dictum potenti risus ut aliquam, sed elit.
+  <% end %>
+  
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria2.jpg',alt: "Galleria 2 Description",title: "Galleria 2") do %>
+      Per augue rhoncus, pede sed nec a quis amet. Sem fusce felis non vulputate, eius vivamus malesuada montes vitae viverra arcu, mauris justo vel fermentum metus urna. 
+      Urna risus, vel mollis morbi in ligula, et diam dui, urna turpis turpis ultricies metus tempus, at magnis tempus maecenas. 
+      Vel sociosqu elit volutpat, mollis neque quis ac ac, dignissim lorem ipsum nullam, penatibus id, tempor cum mauris.
+  <% end %>  
+  
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria3.jpg',alt: "Galleria 3 Description",title: "Galleria 3") do %>
+      Morbi lectus nulla quis maxime. Elit quis a cras eleifend duis, in amet lacus ultricies. 
+      Nonummy sollicitudin, tristique suspendisse cras mauris amet nec, nulla felis velit faucibus tortor, pellentesque dignissim. 
+      Proin lorem, felis rutrum, pretium sed volutpat nulla urna sit, tellus pellentesque curabitur mi sed, dui arcu etiam vivamus donec nullam. 
+      Sit aliquam et justo tellus, porta nec, potenti in arcu wisi vitae. 
+      Magna in, sociosqu sapien, justo dolores at vivamus tristique luctus in, parturient sapien semper cras fermentum.
+  <% end %>
+  
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria4.jpg',alt: "Galleria 4 Description",title: "Galleria 4") do %>
+      A accumsan in facilisi purus morbi, in ultricies vehicula, tellus curabitur tempor, justo excepturi luctus tristique odio. 
+      Ullamcorper vel, sit et at nulla mauris, rutrum pharetra libero justo pellentesque nec. Lectus sodales iaculis viverra. 
+      In rutrum, suscipit a id sed leo montes, integer sit sapien non morbi dolor, erat ipsum iaculis velit aliquam egestas massa, etiam iaculis justo. 
+      Arcu dui suspendisse fringilla, mi nibh, tempor quam quis lectus ut mi.
+  <% end %>  
+  
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria5.jpg',alt: "Galleria 5 Description",title: "Galleria 5") do%>
+      Habitasse vulputate sodales pharetra vitae. Arcu libero ut donec porta sed sapien, metus aliquam qui integer et amet, dui adipiscing justo vel semper. 
+      Dictumst ut, vestibulum nisl lorem interdum, integer auctor, sem scelerisque, eget in nunc ac sit scelerisque. 
+  <% end %>    
+  
+  <%= p_galleria_item(src: '/resources/demo/images/galleria/galleria6.jpg',alt: "Galleria 6 Description",title: "Galleria 6") do %>
+      Mauris at hendrerit velit. Fusce vel dignissim, penatibus faucibus ridiculus in auctor. Sodales placerat. Cras velit ipsum eu etiam malesuada congue. 
+      Eros dui ante metus sit aliquam, praesent eros tempor mauris ut id wisi, metus erat facilisi egestas commodo ut at, elementum suspendisse rutrum mauris quis,  justo aspernatur
+  <% end %>     
+ 
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'inputtext.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;h3&gt;Default&lt;/h3&gt;
+&lt;%= p_galleria('images',panelWidth: 500, panelHeight: 313) do %&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria1.jpg',alt: &quot;Galleria 1 Description&quot;,title: &quot;Galleria 1&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria2.jpg',alt: &quot;Galleria 2 Description&quot;,title: &quot;Galleria 2&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria3.jpg',alt: &quot;Galleria 3 Description&quot;,title: &quot;Galleria 3&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria4.jpg',alt: &quot;Galleria 4 Description&quot;,title: &quot;Galleria 4&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria5.jpg',alt: &quot;Galleria 5 Description&quot;,title: &quot;Galleria 5&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria6.jpg',alt: &quot;Galleria 6 Description&quot;,title: &quot;Galleria 6&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria7.jpg',alt: &quot;Galleria 7 Description&quot;,title: &quot;Galleria 7&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria8.jpg',alt: &quot;Galleria 8 Description&quot;,title: &quot;Galleria 8&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria9.jpg',alt: &quot;Galleria 9 Description&quot;,title: &quot;Galleria 9&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria10.jpg',alt: &quot;Galleria 10 Description&quot;,title: &quot;Galleria 10&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria11.jpg',alt: &quot;Galleria 11 Description&quot;,title: &quot;Galleria 11&quot;)%&gt;
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria12.jpg',alt: &quot;Galleria 12 Description&quot;,title: &quot;Galleria 12&quot;)%&gt;  
+&lt;% end %&gt;
+
+&lt;h3&gt;Content&lt;/h3&gt;
+&lt;%= p_galleria('customcontent',autoPlay: false, customContent: true, showCaption: false,  panelWidth: 360, panelHeight: 200, frameWidth: 100, frameHeight: 60, effect: 'fold', effectSpeed: 500) do %&gt;
+
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria1.jpg',alt: &quot;Galleria 1 Description&quot;,title: &quot;Galleria 1&quot;) do %&gt;
+      Lorem ipsum dolor sit amet, explicabo sapien per elit et, sed sed non sit habitant elit leo, sollicitudin vitae pellentesque, blandit metus at donec. Aenean wisi tristique nulla suspendisse. 
+      Auctor non nam, ultrices nec penatibus ligula dapibus, neque congue scelerisque, dolor nec amet orci eleifend curabitur, morbi in. Sit feugiat non. 
+      A in nunc massa non, nihil pellentesque et laoreet porta lobortis, vel vivamus blandit et. Iaculis ut praesent ipsum praesent mauris, quisque elementum mi donec mi, etiam diam mauris viverra. 
+      Scelerisque faucibus eget pellentesque lacus, etiam eu dictum potenti risus ut aliquam, sed elit.
+  &lt;% end %&gt;
+  
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria2.jpg',alt: &quot;Galleria 2 Description&quot;,title: &quot;Galleria 2&quot;) do %&gt;
+      Per augue rhoncus, pede sed nec a quis amet. Sem fusce felis non vulputate, eius vivamus malesuada montes vitae viverra arcu, mauris justo vel fermentum metus urna. 
+      Urna risus, vel mollis morbi in ligula, et diam dui, urna turpis turpis ultricies metus tempus, at magnis tempus maecenas. 
+      Vel sociosqu elit volutpat, mollis neque quis ac ac, dignissim lorem ipsum nullam, penatibus id, tempor cum mauris.
+  &lt;% end %&gt;  
+  
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria3.jpg',alt: &quot;Galleria 3 Description&quot;,title: &quot;Galleria 3&quot;) do %&gt;
+      Morbi lectus nulla quis maxime. Elit quis a cras eleifend duis, in amet lacus ultricies. 
+      Nonummy sollicitudin, tristique suspendisse cras mauris amet nec, nulla felis velit faucibus tortor, pellentesque dignissim. 
+      Proin lorem, felis rutrum, pretium sed volutpat nulla urna sit, tellus pellentesque curabitur mi sed, dui arcu etiam vivamus donec nullam. 
+      Sit aliquam et justo tellus, porta nec, potenti in arcu wisi vitae. 
+      Magna in, sociosqu sapien, justo dolores at vivamus tristique luctus in, parturient sapien semper cras fermentum.
+  &lt;% end %&gt;
+  
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria4.jpg',alt: &quot;Galleria 4 Description&quot;,title: &quot;Galleria 4&quot;) do %&gt;
+      A accumsan in facilisi purus morbi, in ultricies vehicula, tellus curabitur tempor, justo excepturi luctus tristique odio. 
+      Ullamcorper vel, sit et at nulla mauris, rutrum pharetra libero justo pellentesque nec. Lectus sodales iaculis viverra. 
+      In rutrum, suscipit a id sed leo montes, integer sit sapien non morbi dolor, erat ipsum iaculis velit aliquam egestas massa, etiam iaculis justo. 
+      Arcu dui suspendisse fringilla, mi nibh, tempor quam quis lectus ut mi.
+  &lt;% end %&gt;  
+  
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria5.jpg',alt: &quot;Galleria 5 Description&quot;,title: &quot;Galleria 5&quot;) do%&gt;
+      Habitasse vulputate sodales pharetra vitae. Arcu libero ut donec porta sed sapien, metus aliquam qui integer et amet, dui adipiscing justo vel semper. 
+      Dictumst ut, vestibulum nisl lorem interdum, integer auctor, sem scelerisque, eget in nunc ac sit scelerisque. 
+  &lt;% end %&gt;    
+  
+  &lt;%= p_galleria_item(src: '/resources/demo/images/galleria/galleria6.jpg',alt: &quot;Galleria 6 Description&quot;,title: &quot;Galleria 6&quot;) do %&gt;
+      Mauris at hendrerit velit. Fusce vel dignissim, penatibus faucibus ridiculus in auctor. Sodales placerat. Cras velit ipsum eu etiam malesuada congue. 
+      Eros dui ante metus sit aliquam, praesent eros tempor mauris ut id wisi, metus erat facilisi egestas commodo ut at, elementum suspendisse rutrum mauris quis,  justo aspernatur
+  &lt;% end %&gt;     
+ 
+&lt;% end %&gt;
+    </pre>
+<% end %>
+
+
+
+  <%= p_tabview('doc') %>
