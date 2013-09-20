@@ -6,7 +6,12 @@ class ShowcaseController < ApplicationController
        
   def dropdown
     @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
-  end     
+  end    
+  
+  def picklist
+    @dropdown_car = [['Volkswagen','1'],['Ford','2'],['Mercedes','3'],['Audi','4'],['BMW','5'],
+      ['Honda','6'],['Porsche','7'],['Chevrolet','8'],['Jaguar','9']]
+  end  
   
   def change_theme
     session[:theme_var] = params['theme_select']

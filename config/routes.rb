@@ -34,6 +34,7 @@ Showcase::Application.routes.draw do
   get "showcase/lightbox"
   get "showcase/galleria"
   get "showcase/notify"
+  get "showcase/picklist"
     
   post "ppr/setfirstname"  
   post "/ppr/ajax_growl"

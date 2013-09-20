@@ -1,0 +1,18 @@
+<h1 class="widget-title">Picklist</h1>
+<p>PickList is used to reorder items between differents lists.</p>
+
+<h3>Basic</h3>
+<%= p_picklist('basic') do%>
+  <%= select_tag('source', options_for_select(@dropdown_car)) %>
+  <%= select_tag('target') %>
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'picklist.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+</pre>
+<% end %>
+
+
+
+<%= p_tabview('doc') %>
