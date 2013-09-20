@@ -1,19 +1,34 @@
 <h1 class="widget-title">Ajax</h1>
 <p>PrimeFaces Ajax provide a simple way to update any element without javascript</p>
+<h3>Simple</h3>
 <%= form_tag('/ppr/setfirstname') do %>
   <%= p_text_field_tag('name',@firstname) %>
   <%= p_button_tag('Submit', id: 'btn',ajax: true) %>
-  <%=  content_tag('div',@firstname,id: 'display') %>            
+  <%= content_tag('div',nil,id: 'display') %>  
+<%end%>
+
+<h3>Ajax Growl</h3>
+<%= form_tag('/ppr/ajax_growl') do %>    
+  <%= content_tag('div',nil,id: 'growl') %>
+  <%= p_text_field_tag('name_ajax',@firstname) %>  
+  <%= p_button_tag('Submit', id: 'btn1',ajax: true) %>            
 <%end%>
 
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'ajax.html.erb',for: 'doc') do %>
     <pre name="code" class="xml">
+&lt;h3&gt;Simple&lt;/h3&gt;
 &lt;%= form_tag('/ppr/setfirstname') do %&gt;
   &lt;%= p_text_field_tag('name',@firstname) %&gt;
   &lt;%= p_button_tag('Submit', id: 'btn',ajax: true) %&gt;
+  &lt;%= content_tag('div',nil,id: 'display') %&gt;  
+&lt;%end%&gt;
 
-  &lt;%=  content_tag('div',@firstname,id: 'display') %&gt;            
+&lt;h3&gt;Ajax Growl&lt;/h3&gt;
+&lt;%= form_tag('/ppr/ajax_growl') do %&gt;    
+  &lt;%= content_tag('div',nil,id: 'growl') %&gt;
+  &lt;%= p_text_field_tag('name_ajax',@firstname) %&gt;  
+  &lt;%= p_button_tag('Submit', id: 'btn1',ajax: true) %&gt;            
 &lt;%end%&gt;
     </pre>
   <%end%>
@@ -24,7 +39,13 @@
       </pre>
   <%end%>
 
-  <%= p_tab('tab3',title: 'ppr_controller.erb',for: 'doc') do %>
+  <%= p_tab('tab3',title: '_ajax_growl_content.erb',for: 'doc') do %>
+      <pre name="code" class="xml">
+&lt;%= p_growl('growl',info_title: 'Info',warn_title: 'Warning',error_title: 'Error') %&gt;
+      </pre>
+  <%end%>
+
+  <%= p_tab('tab4',title: 'ppr_controller.erb',for: 'doc') do %>
       <pre name="code" class="ruby">
 class PprController &lt; ApplicationController 
   
@@ -36,6 +57,15 @@ class PprController &lt; ApplicationController
       output = p_ajax_resp(update: [{id: 'display',resp: partial_resp}])
       format.xml { render :xml =&gt; output }                      
     end
+  end    
+  
+  def ajax_growl
+    flash[:info] = params['name_ajax']     
+    respond_to do |format|            
+      partial_resp = render_to_string(partial: &quot;ajax_growl_content&quot;) 
+      output = p_ajax_resp(update: [{id: 'growl',resp: partial_resp}])
+      format.xml { render :xml =&gt; output }                      
+    end    
   end    
 
 end

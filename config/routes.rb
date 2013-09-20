@@ -33,15 +33,16 @@ Showcase::Application.routes.draw do
   get "showcase/rating"
   get "showcase/lightbox"
   get "showcase/galleria"
-  
+    
   post "ppr/setfirstname"  
+  post "/ppr/ajax_growl"
   post "person/create" 
   post "showcase/model"  
   post "showcase/growl_info"   
   post "showcase/growl_error"   
   post "showcase/growl_warn"   
   post "showcase/growl_multiple"   
-  post "showcase/change_theme"
+  post "showcase/change_theme"  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
