@@ -11,7 +11,7 @@
 <%= p_select_tag('filter', options_for_select(@dropdown_options),filter: true) %>
 
 <h3>Content</h3>  
-<%= p_select_tag('content', nil,source: @dropdown_themes, content: @dropdown_content ) %>
+<%= p_select_tag('content', nil, source: @dropdown_themes, content: @dropdown_content ) %>
 
 
 <h3>Documentation</h3>
@@ -34,15 +34,23 @@
 <%= p_tab('tab2',title: 'application.html.erb',for: 'doc') do%>
     <pre name="code" class="xml">
     &lt;!-- Example for ThemeSwitcher --&gt;
-    &lt;%= p_select_tag('themes_select', nil,source: @dropdown_themes, content: @dropdown_content, change: @dropdown_change) %&gt;            
+    &lt;%= form_tag('/showcase/change_theme') do %&gt;
+      &lt;%= p_select_tag('theme_select', nil,source: @dropdown_themes, content: @dropdown_content, change: 'this.form.submit()') %&gt;                               
+    &lt;% end %&gt;  
     </pre>
 <%  end %>
 
 <%= p_tab('tab3',title: 'showcase_controller.html.erb',for: 'doc') do%>
 <pre name="code" class="ruby">
 class ShowcaseController &lt; ApplicationController
+
   def dropdown
     @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
+  end
+
+  def change_theme
+    session[:theme_var] = params['theme_select']
+    redirect_to(:back)
   end
 end   
 </pre>
@@ -53,12 +61,9 @@ end
 class ApplicationController &lt; ActionController::Base
   before_filter:set_themes
 
-  def set_themes      
-    @dropdown_change = %{                      
-                      var themeLink = $('#theme');
-                      var newThemeURL = '/assets/' + $(this).val() + '/theme.css';
-                      themeLink.attr('href', newThemeURL);
-    }        
+  def set_themes
+    
+    session[:theme_var] = 'aristo' if session[:theme_var].nil?
     
     @dropdown_themes =  ['afterdark' , 'afternoon', 'afterwork', 'aristo', 'black-tie', 'blitzer', 'bluesky', 'bootstrap', 'casablanca', 'cruze',  
       'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'glass-x', 'home', 'hot-sneaks', 'humanity', 'le-frog', 'midnight',  
@@ -67,7 +72,7 @@ class ApplicationController &lt; ActionController::Base
     @dropdown_content = %{&lt;img src=&quot;/showcase/resources/demo/images/themes/{option}.png&quot;/&gt;&lt;span style=&quot;float:right;font-size:14px&quot;&gt;{option}&lt;/span&gt;}
   end   
   
-end 
+end
 </pre>
 <%  end %>
 

@@ -18,7 +18,7 @@
 
     <%= stylesheet_link_tag "application" %>    
     <%= stylesheet_link_tag "prime-ui" %>
-    <%= stylesheet_link_tag "aristo/theme", id: 'theme' %> 
+    <%= stylesheet_link_tag "#{session[:theme_var]}/theme", id: 'theme' %> 
 
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "prime-ui" %>    
@@ -47,7 +47,9 @@
               <ul>
                 <li class="widgets-header">ThemeSwitcher</li>
                 <!-- Example for ThemeSwitcher -->
-                <li class="themes-container"><%= p_select_tag('themes_select', nil,source: @dropdown_themes, content: @dropdown_content, change: @dropdown_change) %></li>                                
+                <%= form_tag('/showcase/change_theme') do %>
+                <li class="themes-container"><%= p_select_tag('theme_select', nil,source: @dropdown_themes, content: @dropdown_content, change: 'this.form.submit()') %></li>                                
+                <% end %>
               </ul>
               <ul>
                 <li class="widgets-header">Widgets</li>

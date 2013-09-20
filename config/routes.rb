@@ -41,6 +41,7 @@ Showcase::Application.routes.draw do
   post "showcase/growl_error"   
   post "showcase/growl_warn"   
   post "showcase/growl_multiple"   
+  post "showcase/change_theme"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

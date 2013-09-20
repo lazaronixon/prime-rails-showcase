@@ -7,12 +7,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   
-  def set_themes      
-    @dropdown_change = %{                      
-                      var themeLink = $('#theme');
-                      var newThemeURL = '/assets/' + $(this).val() + '/theme.css';
-                      themeLink.attr('href', newThemeURL);
-    }        
+  def set_themes
+    
+    session[:theme_var] = 'aristo' if session[:theme_var].nil?
     
     @dropdown_themes =  ['afterdark' , 'afternoon', 'afterwork', 'aristo', 'black-tie', 'blitzer', 'bluesky', 'bootstrap', 'casablanca', 'cruze',  
       'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'glass-x', 'home', 'hot-sneaks', 'humanity', 'le-frog', 'midnight',  

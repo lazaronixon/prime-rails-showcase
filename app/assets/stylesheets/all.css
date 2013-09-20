@@ -471,7 +471,7 @@ q:after{content:''}
 .add-nav .active a,
 .add-nav a:hover{color:#0e5486;}
 .content-block{
-	width:910px;
+	width:1024px;
 	padding:18px 24px 0 24px;
 	background:#fff url(../images/bg-content-block.gif) no-repeat;
 }

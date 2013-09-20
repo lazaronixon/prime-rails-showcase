@@ -8,6 +8,11 @@ class ShowcaseController < ApplicationController
     @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
   end     
   
+  def change_theme
+    session[:theme_var] = params['theme_select']
+    redirect_to(:back)
+  end
+  
   def growl_info
     flash[:info] = 'Message Detail here.'
     redirect_to '/showcase/growl'
