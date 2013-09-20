@@ -33,6 +33,7 @@ Showcase::Application.routes.draw do
   get "showcase/rating"
   get "showcase/lightbox"
   get "showcase/galleria"
+  get "showcase/notify"
     
   post "ppr/setfirstname"  
   post "/ppr/ajax_growl"

@@ -1,0 +1,35 @@
+<h1 class="widget-title">Notify</h1>
+<p>Notify is a notification bar that can be positioned at the top or bottom of screen.</p>
+
+<%= p_notify('notifytop',easing: 'easeInOutCirc', widgetVar: 'bar_t') do %>
+  <h1>PrimeUI Notify Widget</h1> 
+  <p>Notify is a notification bar that can be positioned at the top or bottom of screen.</p>
+<% end %>
+  
+<%= p_notify('notifybottom',easing: 'easeInOutCirc',position: 'bottom',widgetVar: 'bar_b') do %>
+  <h1>PrimeUI Notify Widget</h1> 
+  <p>Notify is a notification bar that can be positioned at the top or bottom of screen.</p>
+<% end %>
+
+<%= p_button_tag('Top',id: 't-btn-show',onclick: "PF('bar_t').show()") %>
+<%= p_button_tag('Botton',id: 'b-btn-show',onclick: "PF('bar_b').show()") %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'notify.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;%= p_notify('notifytop',easing: 'easeInOutCirc', widgetVar: 'bar_t') do %&gt;
+  &lt;h1&gt;PrimeUI Notify Widget&lt;/h1&gt; 
+  &lt;p&gt;Notify is a notification bar that can be positioned at the top or bottom of screen.&lt;/p&gt;
+&lt;% end %&gt;
+  
+&lt;%= p_notify('notifybottom',easing: 'easeInOutCirc',position: 'bottom',widgetVar: 'bar_b') do %&gt;
+  &lt;h1&gt;PrimeUI Notify Widget&lt;/h1&gt; 
+  &lt;p&gt;Notify is a notification bar that can be positioned at the top or bottom of screen.&lt;/p&gt;
+&lt;% end %&gt;
+
+&lt;%= p_button_tag('Top',id: 't-btn-show',onclick: &quot;PF('bar_t').show()&quot;) %&gt;
+&lt;%= p_button_tag('Botton',id: 'b-btn-show',onclick: &quot;PF('bar_b').show()&quot;) %&gt;
+</pre>
+<%  end %>
+
+<%= p_tabview('doc') %>
