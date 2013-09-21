@@ -17,8 +17,8 @@
 
 
     <%= stylesheet_link_tag "application" %>    
-    <%= stylesheet_link_tag "prime-ui" %>
     <%= stylesheet_link_tag "#{session[:theme_var]}/theme", id: 'theme' %> 
+    <%= stylesheet_link_tag "prime-ui" %>    
 
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "prime-ui" %>    
@@ -82,6 +82,7 @@
                 <li><%= link_to 'Galleria',showcase_galleria_path %></li>
                 <li><%= link_to 'Notify',showcase_notify_path %></li>
                 <!-- <li><%= link_to 'Picklist',showcase_picklist_path %></li> -->
+                <li><%= link_to 'Autocomplete',showcase_autocomplete_path %></li>
               </ul>
             </div>
 

@@ -1,0 +1,24 @@
+<h1 class="widget-title">AutoComplete</h1>
+<p>AutoComplete is an input widget providing real-time suggestions as being typed.</p>
+
+<h3>Basic</h3>
+<%= p_autocomplete('basic',nil,completeSource: @countries) %>
+
+<h3>Content</h3>
+<%= p_autocomplete('customcontent',nil,completeSource: @dropdown_themes,content: @autocomplete_content) %>
+
+<h3>Dropdown</h3>
+<%= p_autocomplete('dropdown',nil,completeSource: @countries,dropdown: true) %>
+
+<h3>Multiple</h3>
+<%= p_autocomplete('multiple',nil,completeSource: @countries,multiple: true) %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'autocomplete.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>
