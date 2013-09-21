@@ -49,6 +49,22 @@ class ShowcaseController < ApplicationController
     end    
   end
   
+  def table
+    
+    names = ["Nixon","Cagatay","Rails","Silva",'Marcio','Almeida','Amaral','Joseph','Ed','Burns','Civicy','Glicejo','Marcos','Bruno','Lais','Paulo']    
+    
+    @persons = []
+    for i in 0..20
+      @person = Person.new()
+      @person.id = i
+      @person.first_name = names[Random.rand(0..15)]
+      @person.last_name =  names[Random.rand(0..15)]
+      @person.admin = rand(2) > 0
+      @person.age = Random.rand(18..99)       
+      @persons  << @person
+    end
+  end  
+  
   def change_theme
     session[:theme_var] = params['theme_select']
     redirect_to(:back)

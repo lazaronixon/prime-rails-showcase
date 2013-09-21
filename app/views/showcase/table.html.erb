@@ -1,0 +1,91 @@
+<h1 class="widget-title">Table</h1>
+<p>Css classes for table</p>
+
+<div class="pui-datatable ui-widget">
+  <table>
+    <thead>
+      <tr>
+        <th class="ui-state-default">Name</th>
+        <th class="ui-state-default">Last Name</th>
+        <th class="ui-state-default">Admin</th>
+        <th class="ui-state-default">Age</th>
+        <th class="ui-state-default">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @persons.each do |person| %>
+        <tr class="ui-widget-content">
+          <td><%= person.first_name %></td>
+          <td><%= person.last_name %></td>        
+          <td><%= p_check_box_tag('chk_'+person.id.to_s, nil, person.admin, disabled: true) %></td>
+          <td><%= person.age %></td>
+          <td>
+              <%= p_button_to 'Show',showcase_table_path, id: 'btn_show_'+person.id.to_s, icon: 'ui-icon ui-icon-note' , style:"float: left"  %>
+              <%= p_button_to 'Edit', showcase_table_path, id: 'btn_edit_'+person.id.to_s, icon: 'ui-icon ui-icon-pencil', style:"float: left" %>
+              <%= p_button_to 'Destroy', showcase_table_path, id: 'btn_destroy_'+person.id.to_s,icon: 'ui-icon ui-icon-trash'%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'table.html.erb',for: 'doc') do%>
+    <pre name="code" class="xml">
+&lt;div class=&quot;pui-datatable ui-widget&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;ui-state-default&quot;&gt;Name&lt;/th&gt;
+        &lt;th class=&quot;ui-state-default&quot;&gt;Last Name&lt;/th&gt;
+        &lt;th class=&quot;ui-state-default&quot;&gt;Admin&lt;/th&gt;
+        &lt;th class=&quot;ui-state-default&quot;&gt;Age&lt;/th&gt;
+        &lt;th class=&quot;ui-state-default&quot;&gt;Actions&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;% @persons.each do |person| %&gt;
+        &lt;tr class=&quot;ui-widget-content&quot;&gt;
+          &lt;td&gt;&lt;%= person.first_name %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= person.last_name %&gt;&lt;/td&gt;        
+          &lt;td&gt;&lt;%= p_check_box_tag('chk_'+person.id.to_s, nil, person.admin, disabled: true) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= person.age %&gt;&lt;/td&gt;
+          &lt;td&gt;
+              &lt;%= p_button_to 'Show',showcase_table_path, id: 'btn_show_'+person.id.to_s, icon: 'ui-icon ui-icon-note' , style:&quot;float: left&quot;  %&gt;
+              &lt;%= p_button_to 'Edit', showcase_table_path, id: 'btn_edit_'+person.id.to_s, icon: 'ui-icon ui-icon-pencil', style:&quot;float: left&quot; %&gt;
+              &lt;%= p_button_to 'Destroy', showcase_table_path, id: 'btn_destroy_'+person.id.to_s,icon: 'ui-icon ui-icon-trash'%&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;% end %&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+    </pre>
+  <%  end %>
+
+<%= p_tab('tab2',title: 'showcase_controller.rb',for: 'doc') do%>
+    <pre name="code" class="ruby">
+  def table
+    
+    names = [&quot;Nixon&quot;,&quot;Cagatay&quot;,&quot;Rails&quot;,&quot;Silva&quot;,'Marcio','Almeida','Amaral','Joseph','Ed','Burns','Civicy','Glicejo','Marcos','Bruno','Lais','Paulo']    
+    
+    @persons = []
+    for i in 0..20
+      @person = Person.new()
+      @person.id = i
+      @person.first_name = names[Random.rand(0..15)]
+      @person.last_name =  names[Random.rand(0..15)]
+      @person.admin = rand(2) &gt; 0
+      @person.age = Random.rand(18..99)       
+      @persons  &lt;&lt; @person
+    end
+  end 
+    </pre>
+  <%  end %>
+
+
+
+  <%= p_tabview('doc') %>

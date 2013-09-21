@@ -14,7 +14,7 @@
 <%= p_text_field_tag('prefix','$10',spinner: true, prefix: '$') %>  
 
 <h3>Disabled</h3>
-<%= p_text_field_tag('disabled',nil,spinner: true, disabled: 'disabled') %>  
+<%= p_text_field_tag('disabled',nil,spinner: true, disabled: true) %>  
 
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'spinner.html.erb',for: 'doc') do %>
@@ -32,7 +32,7 @@
 &lt;%= p_text_field_tag('prefix','$10',spinner: true, prefix: '$') %&gt;  
 
 &lt;h3&gt;Disabled&lt;/h3&gt;
-&lt;%= p_text_field_tag('disabled',nil,spinner: true, disabled: 'disabled') %&gt; 
+&lt;%= p_text_field_tag('disabled',nil,spinner: true, disabled: true) %&gt; 
     </pre>
   <%end%>
 
