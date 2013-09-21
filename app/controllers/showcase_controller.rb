@@ -36,6 +36,19 @@ class ShowcaseController < ApplicationController
       'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe']
   end  
   
+  def complete_ajax   
+    query = params['remote']
+    results = []
+    for i in 0..9
+      lbl = (query + i.to_s)      
+      results << {label: lbl};      
+    end    
+
+    respond_to do |format|                         
+      format.json { render :json => results }                      
+    end    
+  end
+  
   def change_theme
     session[:theme_var] = params['theme_select']
     redirect_to(:back)
