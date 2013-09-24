@@ -1,0 +1,23 @@
+<h1 class="widget-title">SplitButton</h1>
+<p>SplitButton groups a set of commands in an overlay with a default command.</p>
+
+<%= p_splitbutton('Save', id: 'btn', icon: 'ui-icon-disk') do %>
+  <%= p_splitbutton_item('Update',icon: 'ui-icon-arrowrefresh-1-w',url: showcase_splitbutton_path ) %>
+  <%= p_splitbutton_item('Delete',icon: 'ui-icon-close',url: showcase_splitbutton_path) %>
+  <%= p_splitbutton_item('HomePage',icon: 'ui-icon-extlink',url: showcase_splitbutton_path) %>  
+<% end %>
+
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'splitbutton.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+&lt;%= p_splitbutton('Save', id: 'btn', icon: 'ui-icon-disk') do %&gt;
+  &lt;%= p_splitbutton_item('Update',icon: 'ui-icon-arrowrefresh-1-w',url: showcase_splitbutton_path ) %&gt;
+  &lt;%= p_splitbutton_item('Delete',icon: 'ui-icon-close',url: showcase_splitbutton_path) %&gt;
+  &lt;%= p_splitbutton_item('HomePage',icon: 'ui-icon-extlink',url: showcase_splitbutton_path) %&gt;  
+&lt;% end %&gt;
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>

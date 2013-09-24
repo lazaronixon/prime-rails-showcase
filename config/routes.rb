@@ -38,6 +38,7 @@ Showcase::Application.routes.draw do
   get "showcase/autocomplete"
   get "showcase/table"
   post "showcase/table"
+  get "showcase/splitbutton"
     
   post "ppr/setfirstname"  
   post "/ppr/ajax_growl"
