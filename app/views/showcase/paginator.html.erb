@@ -7,7 +7,9 @@
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'paginator.html.erb',for: 'doc') do%>
 <pre name="code" class="xml">
-
+&lt;%= form_tag('/showcase/paginator',method: 'get') do %&gt;
+  &lt;%= p_paginator('pag', totalRecords: 50, rows: 5) %&gt;
+&lt;% end %&gt;
 </pre>
 <% end %>
 
