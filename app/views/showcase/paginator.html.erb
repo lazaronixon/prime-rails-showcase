@@ -1,0 +1,16 @@
+<h1 class="widget-title">Paginator</h1>
+<p>Paginator is a generic widget to display content in paged format.</p>
+
+<%= form_tag('/showcase/paginator',method: 'get') do %>
+  <%= p_paginator('pag', totalRecords: 50, rows: 5) %>
+<% end %>
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'paginator.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+
+</pre>
+<% end %>
+
+
+
+<%= p_tabview('doc') %>
