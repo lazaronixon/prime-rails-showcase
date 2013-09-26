@@ -40,6 +40,7 @@ Showcase::Application.routes.draw do
   post "showcase/table"
   get "showcase/splitbutton"
   get "showcase/paginator"
+  get "showcase/datatable"
     
   post "ppr/setfirstname"  
   post "/ppr/ajax_growl"

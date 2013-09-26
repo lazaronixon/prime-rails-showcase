@@ -6,7 +6,21 @@ class ShowcaseController < ApplicationController
        
   def dropdown
     @dropdown_options = [['Select One','0'],['Options 1','1'],['Options 2','2'],['Options 3','3']]
-  end    
+  end   
+  
+  def datatable
+
+    @person_columns = [
+      {field: 'id', headerText: 'Id', sortable: true},
+      {field: 'first_name', headerText: 'Name', sortable: true},  
+      {field: 'last_name', headerText: 'Last Name', sortable: true},
+      {field: 'admin', headerText: 'Admin', sortable: true},
+      {field: 'age', headerText: 'Age', sortable: true}       
+      ]   
+      
+    @persons = Person.all 
+    
+  end   
   
   def picklist
     @dropdown_car = [['Volkswagen','1'],['Ford','2'],['Mercedes','3'],['Audi','4'],['BMW','5'],
@@ -49,20 +63,8 @@ class ShowcaseController < ApplicationController
     end    
   end
   
-  def table
-    
-    names = ["Nixon","Cagatay","Rails","Silva",'Marcio','Almeida','Amaral','Joseph','Ed','Burns','Civicy','Glicejo','Marcos','Bruno','Lais','Paulo']    
-    
-    @persons = []
-    for i in 0..20
-      @person = Person.new()
-      @person.id = i
-      @person.first_name = names[Random.rand(0..15)]
-      @person.last_name =  names[Random.rand(0..15)]
-      @person.admin = rand(2) > 0
-      @person.age = Random.rand(18..99)       
-      @persons  << @person
-    end
+  def table    
+    @persons = Person.all
   end  
   
   def change_theme

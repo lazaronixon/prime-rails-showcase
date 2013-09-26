@@ -1,0 +1,18 @@
+<h1 class="widget-title">DataTable</h1>
+<p>Datatable displays data in tabular format. Pagination, Sorting, Selection are built-in features supporting both local and remote data.</p>
+
+<%= form_tag('/showcase/datatable',method: 'get') do %>
+  <%= p_datatable('tbl',columns: @person_columns,datasource: @persons,rowkey: 'id',caption: 'Single Selection',paginator: { rows: 5 },selectionMode: 'single' ) %>
+  <br/>
+  <%= p_button_tag('Submit', id: 'btn') %>
+<% end %>  
+  
+<h3>Documentation</h3>
+<%= p_tab('tab1',title: 'datatable.html.erb',for: 'doc') do%>
+<pre name="code" class="xml">
+</pre>
+<%  end %>
+
+
+
+<%= p_tabview('doc') %>
