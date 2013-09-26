@@ -69,19 +69,7 @@
 <%= p_tab('tab2',title: 'showcase_controller.rb',for: 'doc') do%>
     <pre name="code" class="ruby">
   def table
-    
-    names = [&quot;Nixon&quot;,&quot;Cagatay&quot;,&quot;Rails&quot;,&quot;Silva&quot;,'Marcio','Almeida','Amaral','Joseph','Ed','Burns','Civicy','Glicejo','Marcos','Bruno','Lais','Paulo']    
-    
-    @persons = []
-    for i in 0..20
-      @person = Person.new()
-      @person.id = i
-      @person.first_name = names[Random.rand(0..15)]
-      @person.last_name =  names[Random.rand(0..15)]
-      @person.admin = rand(2) &gt; 0
-      @person.age = Random.rand(18..99)       
-      @persons  &lt;&lt; @person
-    end
+    @persons = Person.all     
   end 
     </pre>
   <%  end %>

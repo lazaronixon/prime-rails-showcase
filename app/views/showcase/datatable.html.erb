@@ -10,9 +10,31 @@
 <h3>Documentation</h3>
 <%= p_tab('tab1',title: 'datatable.html.erb',for: 'doc') do%>
 <pre name="code" class="xml">
+&lt;%= form_tag('/showcase/datatable',method: 'get') do %&gt;
+  &lt;%= p_datatable('tbl',columns: @person_columns,datasource: @persons,rowkey: 'id',caption: 'Single Selection',paginator: { rows: 5 },selectionMode: 'single' ) %&gt;
+  &lt;br/&gt;
+  &lt;%= p_button_tag('Submit', id: 'btn') %&gt;
+&lt;% end %&gt;
 </pre>
 <%  end %>
 
+<%= p_tab('tab1',title: 'showcase_controller.rb',for: 'doc') do%>
+<pre name="code" class="ruby">
+  def datatable
+
+    @person_columns = [
+      {field: 'id', headerText: 'Id', sortable: true},
+      {field: 'first_name', headerText: 'Name', sortable: true},  
+      {field: 'last_name', headerText: 'Last Name', sortable: true},
+      {field: 'admin', headerText: 'Admin', sortable: true},
+      {field: 'age', headerText: 'Age', sortable: true}       
+      ]   
+      
+    @persons = Person.all 
+    
+  end 
+</pre>
+<%  end %>
 
 
 <%= p_tabview('doc') %>
